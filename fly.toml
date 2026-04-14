@@ -1,7 +1,6 @@
 # fly.toml app configuration file generated for loopwise on 2026-04-14T13:16:34Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-
 app = 'loopwise'
 primary_region = 'ams'
 
