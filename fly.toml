@@ -2,22 +2,33 @@
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
-
 app = "loopwise"
 primary_region = "fra"
 
 [build]
-  builder = "paketobuildpacks/builder:base"
+  # Hier gibst du an, wie Fly.io dein Projekt bauen soll.
+  # 'paketobuildpacks/builder:base' ist ein gängiger Builder. 
+  # Wenn du ein eigenes Dockerfile verwendest, könntest du stattdessen eine andere Konfiguration haben,
+  # aber für eine Python-Web-App mit buildpacks ist das oft die einfachste Methode.
+  builder = "paketobuildpacks/builder:base" 
 
 [deploy]
-  command = "gunicorn app:app --bind 0.0.0.0:8080"
+  # DAS IST DER WICHTIGSTE TEIL:
+  # "codex-test-lernplattform.app" sagt Gunicorn: "Suche im Ordner 'codex-test-lernplattform' 
+  # nach der Datei 'app.py' (als Python-Modul) und darin nach der Variable namens 'app'."
+  # "--bind 0.0.0.0:$PORT" sorgt dafür, dass deine App auf dem dynamischen Port lauscht, den Fly.io bereitstellt.
+  # "--log-level info" gibt dir nützliche Logs.
+  command = "gunicorn codex-test-lernplattform.app:app --bind 0.0.0.0:$PORT --log-level info"
 
 [http_service]
   auto_start_machines = true
   auto_stop_machines = true
   force_https = true
-  internal_port = 8080
+  # Der interne Port, auf dem Fly.io mit deiner Anwendung kommuniziert.
+  # Gunicorn bindet per --bind 0.0.0.0:$PORT (dynamisch) und Fly.io leitet externen Traffic hierhin.
+  internal_port = 8080 
   min_machines_running = 1
+  # 'processes' wurde entfernt, da die [deploy] Sektion den Startbefehl definiert.
 
 [[vm]]
   cpu_kind = "shared"
