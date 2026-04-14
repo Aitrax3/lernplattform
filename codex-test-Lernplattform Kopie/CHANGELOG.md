@@ -1,0 +1,33 @@
+# Change Log
+
+## [Unreleased] - 2026-03-10
+- Fehlerbehebung: Registrierung und Passwort-Reset nutzen jetzt explizit `pbkdf2:sha256`, damit der Hashing-Mechanismus in einer Umgebung ohne `hashlib.scrypt` funktioniert und neue Accounts angelegt werden können.
+- UI-Update: Themenübersicht (Sektionen & Quiz-Übersicht) wurde zu großen Karten samt neuer Grid-Struktur ausgebaut, damit Sektionen klarer sichtbar sind und alle Quiz-Themen größer dargestellt werden.
+- Untergruppen: Jeder Themenbereich bietet jetzt eigene Unterkategorien (z. B. Arithmetik, Multiplikation oder Gleichungen), sodass du direkt das passende Quiz mit 10 unterschiedlichen Fragen starten kannst.
+- Fehlerbehebung: Quiz-Score und Fragefolge bleiben pro Lauf konsistent – die Punktzahl wird vor jedem neuen Set zurückgesetzt und die erste Frage ändert sich nicht mehr beim Neuladen der Seite.
+- Avatar-Käufe speichern neue Designs in deiner Sammlung, bei jedem Kauf wird ein einzigartiger Avatar mit einzigartigem Symbol aus dem Symbol-Pool erstellt und automatisch ausgerüstet; die Avatar-Seite zeigt danach weiter alle gesammelten Designs und Symbole zur Auswahl.
+- Levelbasierte Sticker: Für jedes neue Level erscheinen weitere Sticker-Kategorien (z. B. Gehirn-Icons ab Level 5, Premium-Motive ab Level 10), die auf dem Dashboard sichtbar sind und bei erreichter Höhe im Quiz vergeben werden.
+- UI-Polish: Sticker-Walls schweben nun knapp außerhalb der Felder und überlappen nur leicht, sodass sie den Inhalt nicht mehr unterlagern.
+- Reorganisiert: HTML-Vorlagen aus dem Root in `templates/` verschoben und einen neuen `templates/shop.html` hinzugefügt, damit Flask `render_template` zuverlässig findet.
+- `style.css` nach `static/` verschoben und alle Seiten auf `/static/style.css` aktualisiert, damit Stylesheets korrekt ausgeliefert werden.
+- Für die neue Struktur `.gitignore` ergänzt (`__pycache__/`, `*.py[cod]`, `.venv/`).
+- Überarbeitetes CSS mit Inter-Schrift, Farbverlauf-Hintergrund, abgerundeten Kartenelementen, hervorgehobenen Buttons und Liste-Layouts für ein moderneres Erscheinungsbild.
+- Shop nimmt jetzt POST-Anfragen entgegen, reduziert das Guthaben, dokumentiert Käufe mit Zeitstempel und zeigt Nachrichten plus letzte Käufe an.
+- Neu: `/dashboard` zeigt Guthaben, Gesamtausgaben und vollständige Einkaufshistorie; `users.json` speichert jetzt Kauflisten.
+- Avatar-Editor (`/avatar`) speichert Farbe/Form/Symbol, die Vorschau erscheint auf Shop/Dashboard, und die Shopkarten zeigen jetzt Beschreibungen, Preislabels und dein aktuelles Avatar-Icon.
+- Nach jedem Quiz erhält man nun ein Sticker-Icon; die letzten zwanzig Sticker füllen die Containerwände als Hintergrund und zeigen deine Sammlung visuell an.
+- Die Ergebnisseite zeigt jetzt direkt, ob jede Antwort richtig war und listet neben deiner Antwort die erwartete Antwort; die Sticker-Wände überlagern sich und zeigen die Sammlung hinter dem Text.
+- Quizdaten enthalten jetzt rund 100 Fragen über Mathematik, Geografie, Informatik und Wissenschaft; pro Run werden aus jedem Pool genau zehn Zufallsfragen ohne Wiederholung ausgewählt.
+- Sticker werden bereits ab acht richtigen Antworten vergeben, und das Ergebnis weist darauf hin, sobald du knapp danebenlagst oder die Schwelle erreichst.
+- Die Antwortlogik akzeptiert Aliasformen, ignoriert Groß-/Kleinschreibung und erkennt auch leicht anders geschriebene Begriffe („Paris“, „paris“, „PARIS“) sowie Umschreibungen mit denselben Schlüsselwörtern.
+- Neue Authentifizierung & Gamification: Registrierung/Login mit Passwort, Reset-Code, Leaderboard, Erfahrungspunkte, Achievements und ein Review-Flow, der exakt die Fragen + Antworten anzeigt, die du gerade beantwortet hast.
+- Neue Rangliste unter `/leaderboard`: sortiert Nutzer nach Guthaben, zeigt Sticker- sowie Einkaufsmengen und ist von allen Seiten über den Nav-Link erreichbar.\
+- Quizdaten enthalten jetzt rund 100 Fragen über Mathematik, Geografie, Informatik und Wissenschaft; pro Run werden aus jedem Pool genau zehn Zufallsfragen ohne Wiederholung ausgeliefert, damit jede Runde frisch bleibt.
+- Die Ergebnisseite zeigt jetzt direkt, ob jede Antwort richtig war und listet neben deiner Antwort die erwartete Antwort; die Stickerhülle bleibt weiter sichtbar.
+- Sticker werden bereits ab acht richtigen Antworten vergeben, und das Ergebnis weist darauf hin, sobald du knapp danebenlagst oder die Schwelle erreichst.
+- Die Antwortlogik akzeptiert Aliasformen und erlaubt leichte Abweichungen, damit Antworten wie „Paris“ vs. „paris“, „JS“ vs. „JavaScript“ oder „Berlin“ vs. „berlin“ trotzdem als richtig gelten.
+- `quizzes.json` erweitert um neue Themen (Mathematik, Geografie, Informatik, Physik) mit jeweils vier anspruchsvolleren Fragen, damit die Lernplattform schwierigeres Wissen abfragt.
+- Navigation: Eine einzige Menüleiste zeigt jetzt Dashboard, Feedback, Klasse, Lehrer, Shop, Avatar und Abmelden; Lehrer-Links sind nur für Lehrer sichtbar und markieren den aktiven Bereich klar.
+- KI-Feedback & Lehrerübersicht: Nach jedem Quiz liefert die KI eine Analyse, Empfehlungen und ein Übungsprojekt, es gibt zudem einen Chat für Schüler plus ein separates Feedback-Register für Lehrkräfte (Tabellensicht) sowie eine eigene Klassenregister-Seite, damit Aufgaben-, Feedback- und Klassensteuerung getrennt bleiben.
+- Umfeld: Die `.env`-Datei im Projektstamm wird jetzt direkt beim Start eingelesen, damit API-Schlüssel (z. B. `OPENAI_API_KEY`) ohne zusätzliche Export-Schritte verfügbar sind.
+- Konfiguration: `.env` wurde zur `.gitignore` hinzugefügt und mit einem Template-Eintrag für `OPENAI_API_KEY` versehen, damit sensible Schlüssel nicht im Repo landen.

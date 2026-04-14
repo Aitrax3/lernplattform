@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Shop · Lernplattform{% endblock %}
+{% block page_title %}Shop{% endblock %}
+{% block page_subtitle %}Investiere Punkte in Sticker, Hintergründe und Avatare{% endblock %}
+{% block page_content %}
+    {% if message %}
+        <div class="notification">{{ message }}</div>
+    {% endif %}
+    <article class="panel-grid">
+        <article class="panel" style="grid-column: span 2;">
+            <h2>Dein Avatar</h2>
+            <div class="grid-two">
+                <div class="card" style="display:flex; align-items:center; gap:1rem;">
+                    <div class="brand-symbol" style="width:64px; height:64px; background: {{ avatar.color }};">{{ avatar.symbol }}</div>
+                    <div>
+                        <p class="muted-block">Aktuelles Design</p>
+                        <p class="muted-block">Farbe: {{ avatar.color }}</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="muted-block">Dein Kontostand</p>
+                    <p style="font-size:1.8rem; font-weight:700;">{{ money }} Punkte</p>
+                </div>
+            </div>
+        </article>
+    </article>
+    <article class="panel">
+        <h2>Artikel</h2>
+        <div class="grid-two">
+            {% for item in items %}
+                <div class="card">
+                    <h3>{{ item.name }}</h3>
+                    <p class="muted-block">{{ item.description }}</p>
+                    <form method="post">
+                        <button class="primary-action full-width" type="submit" name="item" value="{{ item.name }}">Kaufen · {{ item.price }} P</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </article>
+    {% if purchases %}
+        <article class="panel panel-alt">
+            <h2>Letzte Käufe</h2>
+            <div class="grid-two">
+                {% for purchase in purchases %}
+                    <div class="card">
+                        <p>{{ purchase.name }}</p>
+                        <p class="muted-block">{{ purchase.price }} P · {{ purchase.timestamp }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </article>
+    {% endif %}
+{% endblock %}

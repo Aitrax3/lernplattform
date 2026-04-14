@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ topic }} Quiz · Lernplattform{% endblock %}
+{% block page_title %}{{ topic }} Quiz{% endblock %}
+{% block page_subtitle %}{{ subtopic }} · {{ mode_label }}{% endblock %}
+{% block page_content %}
+    <article class="panel">
+        <div class="card" style="background: var(--panel-alt);">
+            <p style="font-size: 1.3rem; font-weight: 600;">{{ frage }}</p>
+        </div>
+        <form method="post" class="feedback-form">
+            <input type="text" name="answer" placeholder="Deine Antwort" required>
+            <button class="primary-action" type="submit">Antwort absenden</button>
+        </form>
+        <form method="post" class="quiz-exit">
+            <button class="secondary-action" type="submit" name="action" value="exit">Quiz verlassen</button>
+        </form>
+        <div class="muted-block">
+            <p>Bleibe neugierig und schreibe klare Antworten – je akkurater du antwortest, desto besser die Punkte!</p>
+        </div>
+    </article>
+{% endblock %}

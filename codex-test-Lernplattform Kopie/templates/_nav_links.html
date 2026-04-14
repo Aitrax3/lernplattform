@@ -1,0 +1,11 @@
+<div class="nav-links">
+    {% for link in nav_links %}
+        <a
+            href="{{ link.url }}"
+            {% if link.active %}class="is-active"{% endif %}
+            {% if link.view %}data-view="{{ link.view }}"{% endif %}
+        >
+            {{ link.label }}
+        </a>
+    {% endfor %}
+</div>

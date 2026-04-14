@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Schüler-Register · Lernplattform{% endblock %}
+{% block page_title %}Schüler-Register{% endblock %}
+{% block page_subtitle %}Feedback und KI-Insights pro Schüler{% endblock %}
+{% block page_content %}
+    {% if feedback_rows %}
+        <article class="panel">
+            <h2>Aktive Einträge</h2>
+            <div class="table-panel">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Schüler*in</th>
+                            <th>Klasse</th>
+                            <th>Score</th>
+                            <th>Arbeitszeit</th>
+                            <th>Empfohlen</th>
+                            <th>Analyse</th>
+                            <th>Übung</th>
+                            <th>Zuletzt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in feedback_rows %}
+                        <tr>
+                            <td>{{ row.student }}</td>
+                            <td>{{ row.class }}</td>
+                            <td>{{ row.last_score or '–' }}</td>
+                            <td>
+                                {% if row.work_time %}
+                                    {{ row.work_time }}{% if row.work_status_label %} · {{ row.work_status_label }}{% endif %}
+                                {% else %}
+                                    –
+                                {% endif %}
+                            </td>
+                            <td>{{ row.weak_topic or '–' }}</td>
+                            <td>{{ row.analysis or '–' }}</td>
+                            <td>{{ row.recommendation or '–' }}</td>
+                                <td>{{ row.updated or '–' }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    {% else %}
+        <article class="panel panel-alt">
+            <h2>Noch keine Daten</h2>
+            <p class="muted-block">Sobald Schüler*innen Quizzes absolvieren, erscheint hier ein Überblick.</p>
+        </article>
+    {% endif %}
+    <article class="panel">
+        <h2>Deine Klassen</h2>
+        <div class="grid-two">
+            {% for klass in teacher_classes %}
+                <div class="card">
+                    <h3>{{ klass.name }}</h3>
+                    <p class="muted-block">{{ klass.students|length }} Schüler*innen · {{ klass.assignments|length }} Aufgaben</p>
+                </div>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Lehrerportal · Lernplattform{% endblock %}
+{% block page_title %}Lehrerportal{% endblock %}
+{% block page_subtitle %}Aufgaben verteilen, Klassen managen und Überblick behalten{% endblock %}
+{% block page_content %}
+    {% if message %}
+        <div class="notification">{{ message }}</div>
+    {% endif %}
+    <div class="panel-grid">
+        <article class="panel">
+            <h2>Quiz als Aufgabe zuweisen</h2>
+            {% if teacher_class_choices %}
+                <form method="post" class="register-form">
+                    <input type="hidden" name="action" value="assign_quiz">
+                    <select class="primary-select" name="class_code" required>
+                        <option value="">Klasse wählen</option>
+                        {% for choice in teacher_class_choices %}
+                            <option value="{{ choice.code }}">{{ choice.label }}</option>
+                        {% endfor %}
+                    </select>
+                    <select class="primary-select" name="assignment_target" required>
+                        <option value="">Thema / Unterthema</option>
+                        {% for option in topic_options %}
+                            <option value="{{ option.value }}">{{ option.label }}</option>
+                        {% endfor %}
+                    </select>
+                    <select class="primary-select" name="mode" required>
+                        <option value="">Modus wählen</option>
+                        {% for key, label in mode_labels.items() %}
+                            <option value="{{ key }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="datetime-local" name="deadline">
+                    <button class="primary-action" type="submit">Quiz verteilen</button>
+                </form>
+            {% else %}
+                <p class="muted-block">Erstelle zuerst eine Klasse, um Quizzes zuzuweisen.</p>
+            {% endif %}
+        </article>
+    <article class="panel panel-alt">
+        <h2>Übersicht Klassen</h2>
+        {% if teacher_classes %}
+            <div class="grid-two">
+                {% for klass in teacher_classes %}
+                    <div class="card">
+                        <h3>{{ klass.name }}</h3>
+                        <p class="muted-block">{{ klass.students|length }} Schüler*innen · {{ klass.assignments|length }} Aufgaben</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="muted-block">Noch keine Klassen angelegt.</p>
+        {% endif %}
+    </article>
+    {% if selected_class %}
+        <article class="panel">
+            <h2>Wer arbeitet wie lange?</h2>
+            {% if engagement_chart.rows %}
+                <div class="engagement-chart">
+                    {% for entry in engagement_chart.rows %}
+                        <div class="engagement-chart__row">
+                            <div class="engagement-chart__meta">
+                                <span>{{ entry.name }}</span>
+                                <span class="muted-block">{{ entry.label }}</span>
+                            </div>
+                            <div class="engagement-chart__track">
+                                <span
+                                    class="engagement-chart__fill"
+                                    style="width: {{ entry.percent }}%;"
+                                    aria-label="{{ entry.name }}: {{ entry.label }}"
+                                ></span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if engagement_chart.summary %}
+                    <p class="muted-block">
+                        Längste Übung: {{ engagement_chart.summary.max.name }} ({{ engagement_chart.summary.max.label }})
+                        · Kürzeste: {{ engagement_chart.summary.min.name }} ({{ engagement_chart.summary.min.label }})
+                    </p>
+                {% endif %}
+            {% else %}
+                <p class="muted-block">Noch keine Zeitdaten für diese Klasse.</p>
+            {% endif %}
+        </article>
+    {% endif %}
+    </div>
+    <article class="panel">
+        <h2>Aktuelle Aufgaben</h2>
+        {% if all_assignments %}
+            <div class="grid-two">
+                {% for assignment in all_assignments %}
+                    <div class="card">
+                        <h3>{{ assignment.topic }} · {{ assignment.subtopic }}</h3>
+                        <p class="muted-block">Klasse: {{ assignment.class_name }}</p>
+                        <p class="muted-block">{{ assignment.mode_label }} · Deadline: {{ assignment.deadline_display }}</p>
+                        <p class="muted-block">{{ assignment.status_label }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="muted-block">Noch keine Aufgaben zugewiesen.</p>
+        {% endif %}
+    </article>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset bestätigen</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="card-body">
+        <h1>Neues Passwort setzen</h1>
+        {% if message %}
+            <div class="notification">{{ message }}</div>
+        {% endif %}
+        <form method="post" class="auth-form">
+            <input type="text" name="username" placeholder="Benutzername" required>
+            <input type="text" name="code" placeholder="Reset-Code" required>
+            <input type="password" name="password" placeholder="Neues Passwort" required>
+            <input type="password" name="confirm" placeholder="Passwort bestätigen" required>
+            <button class="primary-action" type="submit">Passwort ändern</button>
+        </form>
+        <div class="helper-links">
+            <a href="{{ url_for('index') }}">Zurück zur Anmeldung</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

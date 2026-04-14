@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Lernplattform{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-shell">
+    <aside class="side-nav">
+        <div class="side-brand">
+            <div class="brand-symbol">LP</div>
+            <div>
+                <p class="brand-name">Lernplattform</p>
+                <p class="brand-tag">Intelligente Lernpfade</p>
+            </div>
+        </div>
+        <nav class="side-links">
+            {% for link in nav_links %}
+                <a class="side-link {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+        </nav>
+        <div class="side-footer">
+            {% if current_user %}
+                <p class="side-footer-text">Rolle: {{ current_user.role|capitalize }}</p>
+            {% endif %}
+            <p class="side-footer-text muted">© {{ current_year }} Lernplattform</p>
+        </div>
+    </aside>
+    <main class="main-shell">
+        <div class="platform-sticker-strip sticker-strip" aria-label="Sticker-Leiste">
+            {% for icon in sticker_strip %}
+                <span class="sticker-pill">{{ icon }}</span>
+            {% endfor %}
+        </div>
+        <header class="page-hero">
+            <div>
+                <p class="hero-greeting">Hallo {{ greeting_name }}</p>
+                <h1>{% block page_title %}Dashboard{% endblock %}</h1>
+                <p class="hero-subtitle">{% block page_subtitle %}Logische Prioritäten &amp; strukturierte Lernpfade{% endblock %}</p>
+            </div>
+            {% block hero_extra %}{% endblock %}
+        </header>
+        <section class="page-body">
+            {% block page_content %}{% endblock %}
+        </section>
+    </main>
+</div>
+</body>
+</html>

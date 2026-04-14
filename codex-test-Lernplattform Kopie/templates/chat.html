@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Chat · Lernplattform{% endblock %}
+{% block page_title %}Discord-Chat{% endblock %}
+{% block page_subtitle %}Triff andere Lernende und tauscht euch aus{% endblock %}
+{% block page_content %}
+    <article class="panel chat-panel">
+        <header class="chat-header">
+            <span class="chat-logo" aria-hidden="true">
+                <svg viewBox="0 0 71 55" role="img" aria-hidden="true">
+                    <path d="M60.104 3.5A58.3 58.3 0 0 0 46.742 0 40.1 40.1 0 0 0 39.5 7.5 27.9 27.9 0 0 0 18.359 7.8 57.694 57.694 0 0 0 5.5 3.5C-0.328 20.2-0.519 36.5 0.174 52.7a63.943 63.943 0 0 0 21.122 3.5c1.3-1.9 2.5-3.9 3.5-5.9A39.97 39.97 0 0 1 20 46.5a40.1 40.1 0 0 0 26.5 0 39.24 39.24 0 0 1-5.5 2.7c1 2 2.1 4 3.5 5.9a63.81 63.81 0 0 0 21-3.5c0.874-17 0.175-33.3-6.215-49.2zM23.5 31.5a6.5 6.5 0 0 1 13 0v0a6.5 6.5 0 0 1-13 0zm22 0a6.5 6.5 0 0 1 13 0v0a6.5 6.5 0 0 1-13 0z"/>
+                </svg>
+            </span>
+            <div class="chat-headline">
+                <p class="chat-label">Discord-Chat</p>
+                <h2>Schüler:innen-Chat</h2>
+                <p class="chat-subtitle">Verbindet mit Discord, um Lernfragen und Erlebnisberichte gemeinsam zu besprechen.</p>
+            </div>
+        </header>
+        <p class="chat-info">
+            Der Chat läuft über unseren Discord-Server. Nutze ihn, um Fragen zu stellen oder dich mit Mitschüler:innen auszutauschen.
+            Du wirst automatisch eingeloggt, wenn dein Account bereits mit Discord verknüpft ist.
+        </p>
+        {% if discord_server_id %}
+            <div class="chat-embed">
+                <widgetbot
+                    server="{{ discord_server_id }}"
+                    {% if discord_channel_id %} channel="{{ discord_channel_id }}" {% endif %}
+                    width="900"
+                    height="660"
+                    class="widgetbot-area"
+                ></widgetbot>
+                <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed" async defer></script>
+            </div>
+        {% else %}
+            <div class="notification">
+                Die Discord-Server-ID fehlt in der Konfiguration. Bitte informiere die Administrator:innen.
+            </div>
+        {% endif %}
+    </article>
+{% endblock %}

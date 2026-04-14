@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Rangliste · Lernplattform{% endblock %}
+{% block page_title %}Rangliste{% endblock %}
+{% block page_subtitle %}Vergleiche dein Guthaben und deine Sticker{% endblock %}
+{% block page_content %}
+    <article class="panel">
+        <h2>Rangliste</h2>
+        <p class="muted-block">Sortiert nach Guthaben.</p>
+        <div class="table-panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Name</th>
+                        <th>Guthaben</th>
+                        <th>Sticker</th>
+                        <th>Einkäufe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in rankings %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ entry.name }}</td>
+                            <td>{{ entry.money }}</td>
+                            <td>{{ entry.badges }}</td>
+                            <td>{{ entry.purchases }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </article>
+{% endblock %}

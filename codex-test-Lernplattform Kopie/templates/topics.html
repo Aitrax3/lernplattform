@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Themenübersicht · Lernplattform{% endblock %}
+{% block page_title %}Themenübersicht{% endblock %}
+{% block page_subtitle %}Entdecke Quizbereiche und starte neue Herausforderungen{% endblock %}
+{% block page_content %}
+    <div class="topics-shell">
+        <aside class="topics-register">
+            <p class="register-label">Themen-Register</p>
+            <ul class="register-list">
+                {% for section in topic_cards %}
+                    <li>{{ section.name }}</li>
+                {% endfor %}
+            </ul>
+            <div class="register-note">
+                <p>Wähle nur ein Fach, wir übernehmen den Rest – offene Schwächen haben Vorrang.</p>
+            </div>
+        </aside>
+        <div class="topics-main">
+            <article class="panel panel-quick-links">
+                <h2>Kurzübersicht</h2>
+                <div class="grid-two">
+                    <div class="card">
+                        <h3>Shop &amp; Avatare</h3>
+                        <p class="muted-block">Investiere Punkte oder passe dein Avatar-Design an.</p>
+                        <a class="button-link" href="{{ url_for('shop') }}">Zum Shop</a>
+                    </div>
+                    <div class="card">
+                        <h3>Review</h3>
+                        <p class="muted-block">Sieh dir Antworten aus früheren Quizzes an.</p>
+                        <a class="button-link" href="{{ url_for('review') }}">Review ansehen</a>
+                    </div>
+                    <div class="card">
+                        <h3>Rangliste</h3>
+                        <p class="muted-block">Vergleiche dein Guthaben und Sticker.</p>
+                        <a class="button-link" href="{{ url_for('leaderboard') }}">Rangliste öffnen</a>
+                    </div>
+                </div>
+            </article>
+            {% if student_assignments %}
+                <article class="panel">
+                    <h2>Hausaufgaben für {{ class_name or 'deine Klasse' }}</h2>
+                    <div class="assignment-grid">
+                        {% for assignment in student_assignments %}
+                            <div class="assignment-card">
+                                <h3>{{ assignment.topic }} · {{ assignment.subtopic }}</h3>
+                                <p class="muted-block">{{ assignment.mode_label }} · Deadline: {{ assignment.deadline }}</p>
+                                <p class="muted-block">Zugewiesen: {{ assignment.created }}</p>
+                                <a class="button-link secondary" href="#">Details</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </article>
+            {% endif %}
+            {% if blocking_weakness %}
+                <article class="panel panel-warning">
+                    <h2>Offene Schwäche</h2>
+                    <p class="muted-block">
+                        Wir arbeiten gerade an {{ blocking_weakness.topic }} · {{ blocking_weakness.subtopic }} ({{ blocking_weakness.issue or 'weitere Übung' }}).
+                        Sobald die Schwäche gelöst ist, kannst du ein neues Fach starten.
+                    </p>
+                </article>
+            {% endif %}
+            <section class="topics-overview">
+                <div class="topic-card-grid">
+                    {% for section in topic_cards %}
+                        <article class="topic-card">
+                            <div>
+                                <strong>{{ section.name }}</strong>
+                                <p class="muted-block">{{ section.description }}</p>
+                                <p class="muted-block">
+                                    {{ section.total_questions }} Fragen verfügbar
+                                </p>
+                            </div>
+                            <div class="topic-card-actions">
+                                <a class="button-link" href="{{ url_for('start_subject', topic_slug=section.slug) }}">Quiz starten</a>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}

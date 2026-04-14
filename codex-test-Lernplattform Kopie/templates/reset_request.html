@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passwort zurücksetzen</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="card-body">
+        <h1>Passwort zurücksetzen</h1>
+        {% if message %}
+            <div class="notification">{{ message }}</div>
+        {% endif %}
+        <form method="post" class="auth-form">
+            <input type="text" name="username" placeholder="Benutzername" required>
+            <button class="primary-action" type="submit">Code generieren</button>
+        </form>
+        {% if code %}
+            <p class="muted">Dein Reset-Code: <strong>{{ code }}</strong></p>
+            <p class="muted">Nutze ihn direkt unter <a href="{{ url_for('reset_confirm') }}">Code bestätigen</a>.</p>
+        {% endif %}
+        <div class="helper-links">
+            <a href="{{ url_for('index') }}">Zurück zur Anmeldung</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

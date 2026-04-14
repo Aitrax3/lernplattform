@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback · Lernplattform{% endblock %}
+{% block page_title %}Lernassistent{% endblock %}
+{% block page_subtitle %}KI-Auswertung und Chat für deine Fragen{% endblock %}
+{% block page_content %}
+    <article class="panel">
+        <div class="chat-window">
+            <header class="chat-window-header">
+                <h2>Chat mit deinem Lernassistenten</h2>
+                <p class="muted-block">Die KI setzt dort an, wo du beim letzten Quiz hängengeblieben bist.</p>
+            </header>
+            {% if chat_error %}
+                <div class="notification">{{ chat_error }}</div>
+            {% endif %}
+            <div class="chat-history">
+                <div class="chat-bubble assistant welcome">
+                    <span>{{ chat_welcome }}</span>
+                </div>
+                {% for message in chat_history %}
+                    <div class="chat-bubble {{ 'user' if message.role == 'user' else 'assistant' }}">
+                        <span>{{ message.content }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+            <form method="post" class="chat-form">
+                <label class="visually-hidden" for="chat-message">Nachricht</label>
+                <textarea
+                    id="chat-message"
+                    name="message"
+                    rows="5"
+                    placeholder="Frag die KI nach Fehlern, Tipps oder nächsten Schritten"
+                ></textarea>
+                <div class="chat-actions">
+                    <button class="primary-action" type="submit">Antwort erhalten</button>
+                </div>
+                <div class="chat-status" id="chat-status" aria-live="polite"></div>
+            </form>
+        </div>
+    </article>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var history = document.querySelector(".chat-history");
+            if (history) {
+                history.scrollTop = history.scrollHeight;
+            }
+            var form = document.querySelector(".chat-form");
+            if (!form) {
+                return;
+            }
+            var button = form.querySelector("button");
+            var statusEl = document.getElementById("chat-status");
+            if (!button) {
+                return;
+            }
+            var idleLabel = button.textContent.trim();
+            button.dataset.idleLabel = idleLabel;
+            var setIdle = function () {
+                button.textContent = button.dataset.idleLabel || "Antwort erhalten";
+            };
+            setIdle();
+            button.disabled = false;
+            form.addEventListener("submit", function () {
+                button.disabled = true;
+                button.textContent = "Antwort wird erstellt…";
+                if (statusEl) {
+                    statusEl.textContent = "Warte auf die KI-Antwort…";
+                }
+                if (history) {
+                    history.classList.add("chat-loading");
+                    history.scrollTop = history.scrollHeight;
+                }
+            });
+        });
+    </script>
+{% endblock %}

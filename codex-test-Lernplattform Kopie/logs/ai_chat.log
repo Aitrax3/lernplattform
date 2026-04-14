@@ -1,0 +1,1063 @@
+2026-04-06 12:39:10,267 DEBUG Chatbot request message=Wie lerne ich mathe am bestn history=[]
+2026-04-06 12:39:10,812 WARNING Chatbot response returned status=401
+2026-04-06 12:39:34,763 DEBUG Chatbot request message=wie löse ich Gleichungen? history=['Wie lerne ich mathe am bestn', 'Ich konnte gerade keine Antwort abrufen. Versuch es gleich erneut oder formuliere dein Anliegen anders.']
+2026-04-06 12:39:35,158 WARNING Chatbot response returned status=401
+2026-04-06 12:45:29,807 DEBUG Chatbot request message=Test history=[]
+2026-04-06 12:45:29,808 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-06 12:45:29,815 DEBUG Chatbot request message=Test history=[]
+2026-04-06 12:45:29,816 ERROR Chatbot OpenAI request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 625, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 115, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-06 12:48:39,297 DEBUG Chatbot request message=wie löse ich Gleichungen? history=['Wie lerne ich mathe am bestn', 'Ich konnte gerade keine Antwort abrufen. Versuch es gleich erneut oder formuliere dein Anliegen anders.', 'wie löse ich Gleichungen?', 'Ich konnte gerade keine Antwort abrufen. Versuch es gleich erneut oder formuliere dein Anliegen anders.']
+2026-04-06 12:48:39,764 WARNING Chatbot response returned status=401 detail=Incorrect API key provided: sk-your-****here. You can find your API key at https://platform.openai.com/account/api-keys.
+2026-04-06 12:48:54,624 DEBUG Chatbot request message=wie löse ich Gleichungen? history=['Wie lerne ich mathe am bestn', 'Ich konnte gerade keine Antwort abrufen. Versuch es gleich erneut oder formuliere dein Anliegen anders.', 'wie löse ich Gleichungen?', 'Ich konnte gerade keine Antwort abrufen. Versuch es gleich erneut oder formuliere dein Anliegen anders.', 'wie löse ich Gleichungen?', 'Die Anfrage wurde von OpenAI abgelehnt (401). Bitte überprüfe deinen OPENAI_API_KEY.']
+2026-04-06 12:48:54,968 WARNING Chatbot response returned status=401 detail=Incorrect API key provided: sk-your-****here. You can find your API key at https://platform.openai.com/account/api-keys.
+2026-04-06 12:55:34,918 DEBUG Chatbot request message=Test history=[]
+2026-04-06 12:55:34,920 INFO OpenAI not configured for chat; returning offline guidance
+2026-04-06 12:55:35,104 DEBUG Chatbot request message=Test history=[]
+2026-04-06 12:55:35,105 INFO OpenAI not configured for chat; returning offline guidance
+2026-04-06 12:56:10,025 DEBUG Chatbot request message=Test history=[]
+2026-04-06 12:56:10,026 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-06 12:56:10,032 DEBUG Chatbot request message=Test history=[]
+2026-04-06 12:56:10,033 ERROR Chatbot OpenAI request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 641, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-06 12:56:10,044 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-06 12:57:03,127 WARNING Live quiz question request failed status=401 detail=Incorrect API key provided: sk-your-****here. You can find your API key at https://platform.openai.com/account/api-keys.
+2026-04-06 12:57:41,046 DEBUG Request feedback summary topic=Geschichte subtopic=Weltgeschichte mode=leicht answers=10
+2026-04-06 12:57:41,416 ERROR OpenAI feedback request failed for Geschichte/Weltgeschichte/leicht
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 508, in generate_openai_feedback_summary
+    response.raise_for_status()
+  File "/Users/aidan/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.openai.com/v1/chat/completions
+2026-04-06 12:57:41,430 INFO Fallback feedback triggered due to incorrect answers for Geschichte/Weltgeschichte (count=9)
+2026-04-06 13:10:53,806 DEBUG Chatbot request message=Test history=[]
+2026-04-06 13:10:53,808 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-06 13:10:53,814 DEBUG Chatbot request message=Test history=[]
+2026-04-06 13:10:53,815 ERROR Chatbot OpenAI request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 649, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-06 13:10:53,825 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-06 13:11:04,314 DEBUG Chatbot request message=Test history=[]
+2026-04-06 13:11:04,315 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-06 13:11:04,321 DEBUG Chatbot request message=Test history=[]
+2026-04-06 13:11:04,323 ERROR Chatbot OpenAI request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 649, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-06 13:11:04,335 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 16:32:29,830 INFO Fallback feedback triggered due to incorrect answers for Geschichte/Weltgeschichte (count=9)
+2026-04-07 16:39:54,755 DEBUG Chatbot request message=Test history=[]
+2026-04-07 16:39:54,758 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 16:39:54,786 DEBUG Chatbot request message=Test history=[]
+2026-04-07 16:39:54,792 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 649, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 16:39:54,822 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 16:43:53,620 DEBUG Chatbot request message=Test history=[]
+2026-04-07 16:43:53,624 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 16:43:53,640 DEBUG Chatbot request message=Test history=[]
+2026-04-07 16:43:53,644 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 649, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 16:43:53,679 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 16:45:15,793 DEBUG Chatbot request message=Test history=[]
+2026-04-07 16:45:15,796 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 16:45:15,807 DEBUG Chatbot request message=Test history=[]
+2026-04-07 16:45:15,808 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 649, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 16:45:15,826 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 16:49:06,666 DEBUG Chatbot request message=Gleichungen history=['wie löse ich Gleichungen?', 'Ich konnte gerade keine Antwort abrufen. Versuch es gleich erneut oder formuliere dein Anliegen anders.', 'wie löse ich Gleichungen?', 'Die Anfrage wurde von OpenAI abgelehnt (401). Bitte überprüfe deinen OPENAI_API_KEY.', 'wie löse ich Gleichungen?', 'Die Anfrage wurde von OpenAI abgelehnt (401). Bitte überprüfe deinen OPENAI_API_KEY.']
+2026-04-07 16:49:06,674 INFO OpenRouter not configured for chat; returning offline guidance
+2026-04-07 16:51:02,041 DEBUG Chatbot request message=Gleichungen history=['wie löse ich Gleichungen?', 'Die Anfrage wurde von OpenAI abgelehnt (401). Bitte überprüfe deinen OPENAI_API_KEY.', 'wie löse ich Gleichungen?', 'Die Anfrage wurde von OpenAI abgelehnt (401). Bitte überprüfe deinen OPENAI_API_KEY.', 'Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.']
+2026-04-07 16:51:02,047 INFO OpenRouter not configured for chat; returning offline guidance
+2026-04-07 16:53:42,507 DEBUG Chatbot request message=Gleichungen history=['wie löse ich Gleichungen?', 'Die Anfrage wurde von OpenAI abgelehnt (401). Bitte überprüfe deinen OPENAI_API_KEY.', 'Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.']
+2026-04-07 16:53:42,508 INFO OpenRouter not configured for chat; returning offline guidance
+2026-04-07 16:53:49,680 DEBUG Chatbot request message=gleichungen history=['Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.']
+2026-04-07 16:53:49,681 INFO OpenRouter not configured for chat; returning offline guidance
+2026-04-07 16:57:32,362 DEBUG Chatbot request message=wie mache ich mal history=['Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.']
+2026-04-07 16:57:32,833 WARNING Chatbot response returned status=401 detail=Missing or invalid Authorization header
+2026-04-07 17:05:23,210 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:05:23,211 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:05:23,217 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:05:23,219 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 649, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:05:23,232 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 17:08:57,221 INFO OpenRouter key loaded: True
+2026-04-07 17:08:57,453 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:08:57,454 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:08:57,461 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:08:57,462 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 650, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:08:57,474 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 17:09:19,511 INFO OpenRouter key loaded: True
+2026-04-07 17:09:20,103 INFO OpenRouter key loaded: True
+2026-04-07 17:09:35,594 DEBUG Chatbot request message=malrechnen history=['Gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'wie mache ich mal', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.']
+2026-04-07 17:09:35,852 WARNING Chatbot response returned status=401 detail=Missing or invalid Authorization header
+2026-04-07 17:11:19,118 INFO OpenRouter key loaded: True
+2026-04-07 17:11:19,347 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:11:19,348 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:11:19,354 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:11:19,356 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 650, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:11:19,368 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 17:12:18,069 INFO OpenRouter key loaded: True
+2026-04-07 17:12:18,609 INFO OpenRouter key loaded: True
+2026-04-07 17:12:46,914 DEBUG Chatbot request message=malrechnen? history=['gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'wie mache ich mal', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.', 'malrechnen', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.']
+2026-04-07 17:12:50,283 DEBUG Chatbot request message=malrechnen? history=['gleichungen', 'Ich kann dir gerade keine externe Hilfe bieten. Schau dir deine letzten Fehler an und oder wiederhole das Thema Schritt für Schritt.', 'wie mache ich mal', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.', 'malrechnen', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.']
+2026-04-07 17:12:55,716 INFO Chatbot response generated: Malrechnen, oder Multiplikation, ist eine grundlegende mathematische Operation. Hier sind einige Tipps und Erklärungen, die dir helfen können:
+
+### Grundlegende Konzepte
+
+1. **Definition**: Multiplikation ist eine wiederholte Addition. Zum Beispiel bedeutet \(3 \times 4\) dass du 3 viermal addierst: \(3 + 3 + 3 + 3 = 12\).
+
+2. **Faktoren**: Die Zahlen, die multipliziert werden, nennt man Faktoren. In \(3 \times 4\) sind 3 und 4 die Faktoren.
+
+3. **Produkt**: Das Ergebnis der Multiplikation nennt man Produkt. In unserem Beispiel ist das Produkt 12.
+
+### Tipps zum Malrechnen
+
+1. **Einmaleins lernen**: Das Einmaleins ist eine wichtige Grundlage. Übe die kleinen Multiplikationen (1 bis 10) regelmäßig.
+
+2. **Muster erkennen**
+2026-04-07 17:12:58,277 INFO Chatbot response generated: Malrechnen, also die Multiplikation, ist eine grundlegende mathematische Operation. Hier sind einige Tipps, um das Malrechnen zu üben und besser zu verstehen:
+
+### 1. **Grundlagen verstehen**
+   - Multiplikation ist wiederholte Addition. Zum Beispiel: \(3 \times 4\) bedeutet, dass du 3 viermal addierst: \(3 + 3 + 3 + 3 = 12\).
+
+### 2. **Einmaleins lernen**
+   - Übe das Einmaleins (1 bis 10). Du kannst Tabellen nutzen oder Karten erstellen, um die Ergebnisse zu lernen.
+
+### 3. **Verwendung von Hilfsmitteln**
+   - Nutze Multiplikationstafeln oder Apps, die dir helfen, die Multiplikation zu üben.
+   - Spiele, die auf Multiplikation basieren, können das Lernen unterhaltsamer machen.
+
+### 4. **Zahlen zerlegen**
+2026-04-07 17:13:21,459 DEBUG Chatbot request message=wie löse ich gleichungen? history=['wie mache ich mal', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.', 'malrechnen', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.', 'malrechnen?', 'Malrechnen, also die Multiplikation, ist eine grundlegende mathematische Operation. Hier sind einige Tipps, um das Malrechnen zu üben und besser zu verstehen:\n\n### 1. **Grundlagen verstehen**\n   - Multiplikation ist wiederholte Addition. Zum Beispiel: \\(3 \\times 4\\) bedeutet, dass du 3 viermal addierst: \\(3 + 3 + 3 + 3 = 12\\).\n\n### 2. **Einmaleins lernen**\n   - Übe das Einmaleins (1 bis 10). Du kannst Tabellen nutzen oder Karten erstellen, um die Ergebnisse zu lernen.\n\n### 3. **Verwendung von Hilfsmitteln**\n   - Nutze Multiplikationstafeln oder Apps, die dir helfen, die Multiplikation zu üben.\n   - Spiele, die auf Multiplikation basieren, können das Lernen unterhaltsamer machen.\n\n### 4. **Zahlen zerlegen**']
+2026-04-07 17:13:31,071 INFO Chatbot response generated: Das Lösen von Gleichungen ist eine wichtige Fähigkeit in der Mathematik. Hier sind einige Schritte und Tipps, die dir helfen können:
+
+### 1. **Verstehe die Gleichung**
+   - Eine Gleichung ist eine Aussage, dass zwei Ausdrücke gleich sind, z.B. \(2x + 3 = 11\). Das Ziel ist es, den Wert von \(x\) zu finden.
+
+### 2. **Isoliere die Variable**
+   - Um die Variable (z.B. \(x\)) zu isolieren, musst du sie auf einer Seite der Gleichung haben. Hier sind die Schritte, die du befolgen kannst:
+     - **Subtrahiere oder addiere**: Wenn auf einer Seite der Gleichung eine Zahl steht, subtrahiere oder addiere sie auf beiden Seiten. 
+       - Beispiel: \(2x + 3 = 11\) → \(2x = 11 - 3\) →
+2026-04-07 17:15:38,541 DEBUG Chatbot request message=ausführlicher bitte history=['malrechnen', 'Die Anfrage wurde von OpenRouter abgelehnt (401). Bitte überprüfe deinen OPENROUTER_API_KEY.', 'malrechnen?', 'Malrechnen, also die Multiplikation, ist eine grundlegende mathematische Operation. Hier sind einige Tipps, um das Malrechnen zu üben und besser zu verstehen:\n\n### 1. **Grundlagen verstehen**\n   - Multiplikation ist wiederholte Addition. Zum Beispiel: \\(3 \\times 4\\) bedeutet, dass du 3 viermal addierst: \\(3 + 3 + 3 + 3 = 12\\).\n\n### 2. **Einmaleins lernen**\n   - Übe das Einmaleins (1 bis 10). Du kannst Tabellen nutzen oder Karten erstellen, um die Ergebnisse zu lernen.\n\n### 3. **Verwendung von Hilfsmitteln**\n   - Nutze Multiplikationstafeln oder Apps, die dir helfen, die Multiplikation zu üben.\n   - Spiele, die auf Multiplikation basieren, können das Lernen unterhaltsamer machen.\n\n### 4. **Zahlen zerlegen**', 'wie löse ich gleichungen?', 'Das Lösen von Gleichungen ist eine wichtige Fähigkeit in der Mathematik. Hier sind einige Schritte und Tipps, die dir helfen können:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung ist eine Aussage, dass zwei Ausdrücke gleich sind, z.B. \\(2x + 3 = 11\\). Das Ziel ist es, den Wert von \\(x\\) zu finden.\n\n### 2. **Isoliere die Variable**\n   - Um die Variable (z.B. \\(x\\)) zu isolieren, musst du sie auf einer Seite der Gleichung haben. Hier sind die Schritte, die du befolgen kannst:\n     - **Subtrahiere oder addiere**: Wenn auf einer Seite der Gleichung eine Zahl steht, subtrahiere oder addiere sie auf beiden Seiten. \n       - Beispiel: \\(2x + 3 = 11\\) → \\(2x = 11 - 3\\) →']
+2026-04-07 17:15:42,787 INFO Chatbot response generated: Natürlich! Hier ist eine ausführliche Anleitung, wie du Gleichungen löst, Schritt für Schritt:
+
+### 1. **Verstehe die Gleichung**
+   - Eine Gleichung hat die Form \(A = B\), wobei \(A\) und \(B\) Ausdrücke sind, die gleich sind. Das Ziel ist es, die Variable (z.B. \(x\)) zu isolieren.
+
+### 2. **Schritte zum Lösen von Gleichungen**
+
+#### Beispiel: \(2x + 3 = 11\)
+
+#### Schritt 1: Subtrahiere oder addiere, um die Konstante zu isolieren
+   - Beginne damit, die Konstante (in diesem Fall die \(3\)) von der linken Seite zu entfernen.
+   - Subtrahiere \(3\) von beiden Seiten der Gleichung:
+     \[
+     2x + 3 - 3 = 11 - 3
+     \]
+2026-04-07 17:15:57,188 INFO OpenRouter key loaded: True
+2026-04-07 17:16:02,176 INFO OpenRouter key loaded: True
+2026-04-07 17:16:06,366 INFO OpenRouter key loaded: True
+2026-04-07 17:16:06,600 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:16:06,601 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:16:06,607 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:16:06,608 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 664, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:16:06,620 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 17:16:24,071 INFO OpenRouter key loaded: True
+2026-04-07 17:16:25,170 INFO OpenRouter key loaded: True
+2026-04-07 17:16:25,450 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:16:25,453 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:16:25,462 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:16:25,464 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 665, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:16:25,477 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 17:16:35,780 DEBUG Chatbot request message=wie löse ich gleichungen? history=['malrechnen?', 'Malrechnen, also die Multiplikation, ist eine grundlegende mathematische Operation. Hier sind einige Tipps, um das Malrechnen zu üben und besser zu verstehen:\n\n### 1. **Grundlagen verstehen**\n   - Multiplikation ist wiederholte Addition. Zum Beispiel: \\(3 \\times 4\\) bedeutet, dass du 3 viermal addierst: \\(3 + 3 + 3 + 3 = 12\\).\n\n### 2. **Einmaleins lernen**\n   - Übe das Einmaleins (1 bis 10). Du kannst Tabellen nutzen oder Karten erstellen, um die Ergebnisse zu lernen.\n\n### 3. **Verwendung von Hilfsmitteln**\n   - Nutze Multiplikationstafeln oder Apps, die dir helfen, die Multiplikation zu üben.\n   - Spiele, die auf Multiplikation basieren, können das Lernen unterhaltsamer machen.\n\n### 4. **Zahlen zerlegen**', 'wie löse ich gleichungen?', 'Das Lösen von Gleichungen ist eine wichtige Fähigkeit in der Mathematik. Hier sind einige Schritte und Tipps, die dir helfen können:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung ist eine Aussage, dass zwei Ausdrücke gleich sind, z.B. \\(2x + 3 = 11\\). Das Ziel ist es, den Wert von \\(x\\) zu finden.\n\n### 2. **Isoliere die Variable**\n   - Um die Variable (z.B. \\(x\\)) zu isolieren, musst du sie auf einer Seite der Gleichung haben. Hier sind die Schritte, die du befolgen kannst:\n     - **Subtrahiere oder addiere**: Wenn auf einer Seite der Gleichung eine Zahl steht, subtrahiere oder addiere sie auf beiden Seiten. \n       - Beispiel: \\(2x + 3 = 11\\) → \\(2x = 11 - 3\\) →', 'ausführlicher bitte', 'Natürlich! Hier ist eine ausführliche Anleitung, wie du Gleichungen löst, Schritt für Schritt:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung hat die Form \\(A = B\\), wobei \\(A\\) und \\(B\\) Ausdrücke sind, die gleich sind. Das Ziel ist es, die Variable (z.B. \\(x\\)) zu isolieren.\n\n### 2. **Schritte zum Lösen von Gleichungen**\n\n#### Beispiel: \\(2x + 3 = 11\\)\n\n#### Schritt 1: Subtrahiere oder addiere, um die Konstante zu isolieren\n   - Beginne damit, die Konstante (in diesem Fall die \\(3\\)) von der linken Seite zu entfernen.\n   - Subtrahiere \\(3\\) von beiden Seiten der Gleichung:\n     \\[\n     2x + 3 - 3 = 11 - 3\n     \\]']
+2026-04-07 17:16:39,812 INFO Chatbot response generated: Das Lösen von Gleichungen ist ein fundamentaler Teil der Mathematik, und es gibt verschiedene Methoden, um dies zu tun. Hier sind die Schritte, die du befolgen kannst, um Gleichungen systematisch zu lösen: 1. **Verstehe die Gleichung** - Eine Gleichung ist eine mathematische Aussage, die besagt, dass zwei Ausdrücke gleich sind, z.B. \(2x + 3 = 11\). Das Ziel ist es, den Wert der Variablen (in diesem Fall \(x\)) zu finden. 2. **Schritte zum Lösen von Gleichungen** Beispiel: \(2x + 3 = 11\) Schritt 1: Isoliere die Variable - Um die Variable \(x\) zu isolieren, musst du alle anderen Terme auf die andere Seite der Gleichung bringen. Beginne damit, die Konstante (hier \(3\)) zu entfernen
+2026-04-07 17:17:36,478 DEBUG Chatbot request message=erkläre gleichungen history=['malrechnen?', 'Malrechnen, also die Multiplikation, ist eine grundlegende mathematische Operation. Hier sind einige Tipps, um das Malrechnen zu üben und besser zu verstehen:\n\n### 1. **Grundlagen verstehen**\n   - Multiplikation ist wiederholte Addition. Zum Beispiel: \\(3 \\times 4\\) bedeutet, dass du 3 viermal addierst: \\(3 + 3 + 3 + 3 = 12\\).\n\n### 2. **Einmaleins lernen**\n   - Übe das Einmaleins (1 bis 10). Du kannst Tabellen nutzen oder Karten erstellen, um die Ergebnisse zu lernen.\n\n### 3. **Verwendung von Hilfsmitteln**\n   - Nutze Multiplikationstafeln oder Apps, die dir helfen, die Multiplikation zu üben.\n   - Spiele, die auf Multiplikation basieren, können das Lernen unterhaltsamer machen.\n\n### 4. **Zahlen zerlegen**', 'wie löse ich gleichungen?', 'Das Lösen von Gleichungen ist eine wichtige Fähigkeit in der Mathematik. Hier sind einige Schritte und Tipps, die dir helfen können:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung ist eine Aussage, dass zwei Ausdrücke gleich sind, z.B. \\(2x + 3 = 11\\). Das Ziel ist es, den Wert von \\(x\\) zu finden.\n\n### 2. **Isoliere die Variable**\n   - Um die Variable (z.B. \\(x\\)) zu isolieren, musst du sie auf einer Seite der Gleichung haben. Hier sind die Schritte, die du befolgen kannst:\n     - **Subtrahiere oder addiere**: Wenn auf einer Seite der Gleichung eine Zahl steht, subtrahiere oder addiere sie auf beiden Seiten. \n       - Beispiel: \\(2x + 3 = 11\\) → \\(2x = 11 - 3\\) →', 'ausführlicher bitte', 'Natürlich! Hier ist eine ausführliche Anleitung, wie du Gleichungen löst, Schritt für Schritt:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung hat die Form \\(A = B\\), wobei \\(A\\) und \\(B\\) Ausdrücke sind, die gleich sind. Das Ziel ist es, die Variable (z.B. \\(x\\)) zu isolieren.\n\n### 2. **Schritte zum Lösen von Gleichungen**\n\n#### Beispiel: \\(2x + 3 = 11\\)\n\n#### Schritt 1: Subtrahiere oder addiere, um die Konstante zu isolieren\n   - Beginne damit, die Konstante (in diesem Fall die \\(3\\)) von der linken Seite zu entfernen.\n   - Subtrahiere \\(3\\) von beiden Seiten der Gleichung:\n     \\[\n     2x + 3 - 3 = 11 - 3\n     \\]']
+2026-04-07 17:17:41,372 INFO Chatbot response generated: Gleichungen sind fundamentale Konzepte in der Mathematik, die eine Beziehung zwischen zwei Ausdrücken darstellen. Hier ist eine detaillierte Erklärung, was Gleichungen sind, wie sie funktionieren und wie man sie löst. 1. **Definition einer Gleichung**
+Eine Gleichung ist eine mathematische Aussage, die besagt, dass zwei Ausdrücke gleich sind. Sie wird durch das Gleichheitszeichen \(=\) dargestellt. Zum Beispiel:
+- \(2x + 3 = 11\) In diesem Beispiel sind \(2x + 3\) und \(11\) die beiden Ausdrücke, die gleich sind. 2. **Bestandteile einer Gleichung**
+- **Variablen**: Symbole, die unbekannte Werte repräsentieren, wie \(x\) oder \(y\).
+- **Konstanten**: Feste Werte, die in der Gleichung vorkommen, wie \(3\) oder \(11\).
+- 
+2026-04-07 17:19:03,468 INFO OpenRouter key loaded: True
+2026-04-07 17:19:06,345 INFO OpenRouter key loaded: True
+2026-04-07 17:19:07,242 INFO OpenRouter key loaded: True
+2026-04-07 17:19:07,466 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:19:07,467 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:19:07,473 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:19:07,474 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 672, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:19:07,485 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 17:19:18,902 DEBUG Chatbot request message=erkläre gleichungen history=['wie löse ich gleichungen?', 'Das Lösen von Gleichungen ist eine wichtige Fähigkeit in der Mathematik. Hier sind einige Schritte und Tipps, die dir helfen können:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung ist eine Aussage, dass zwei Ausdrücke gleich sind, z.B. \\(2x + 3 = 11\\). Das Ziel ist es, den Wert von \\(x\\) zu finden.\n\n### 2. **Isoliere die Variable**\n   - Um die Variable (z.B. \\(x\\)) zu isolieren, musst du sie auf einer Seite der Gleichung haben. Hier sind die Schritte, die du befolgen kannst:\n     - **Subtrahiere oder addiere**: Wenn auf einer Seite der Gleichung eine Zahl steht, subtrahiere oder addiere sie auf beiden Seiten. \n       - Beispiel: \\(2x + 3 = 11\\) → \\(2x = 11 - 3\\) →', 'ausführlicher bitte', 'Natürlich! Hier ist eine ausführliche Anleitung, wie du Gleichungen löst, Schritt für Schritt:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung hat die Form \\(A = B\\), wobei \\(A\\) und \\(B\\) Ausdrücke sind, die gleich sind. Das Ziel ist es, die Variable (z.B. \\(x\\)) zu isolieren.\n\n### 2. **Schritte zum Lösen von Gleichungen**\n\n#### Beispiel: \\(2x + 3 = 11\\)\n\n#### Schritt 1: Subtrahiere oder addiere, um die Konstante zu isolieren\n   - Beginne damit, die Konstante (in diesem Fall die \\(3\\)) von der linken Seite zu entfernen.\n   - Subtrahiere \\(3\\) von beiden Seiten der Gleichung:\n     \\[\n     2x + 3 - 3 = 11 - 3\n     \\]', 'erkläre gleichungen', 'Gleichungen sind fundamentale Konzepte in der Mathematik, die eine Beziehung zwischen zwei Ausdrücken darstellen. Hier ist eine detaillierte Erklärung, was Gleichungen sind, wie sie funktionieren und wie man sie löst. 1. **Definition einer Gleichung**\nEine Gleichung ist eine mathematische Aussage, die besagt, dass zwei Ausdrücke gleich sind. Sie wird durch das Gleichheitszeichen \\(=\\) dargestellt. Zum Beispiel:\n- \\(2x + 3 = 11\\) In diesem Beispiel sind \\(2x + 3\\) und \\(11\\) die beiden Ausdrücke, die gleich sind. 2. **Bestandteile einer Gleichung**\n- **Variablen**: Symbole, die unbekannte Werte repräsentieren, wie \\(x\\) oder \\(y\\).\n- **Konstanten**: Feste Werte, die in der Gleichung vorkommen, wie \\(3\\) oder \\(11\\).\n- ']
+2026-04-07 17:19:25,004 INFO Chatbot response generated: Gerne! Lass uns Gleichungen einfach erklären. Was ist eine Gleichung?
+Eine Gleichung ist wie eine mathematische Aussage, die sagt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen \(=\). Beispiel:
+Stell dir vor, du hast eine Gleichung wie diese:
+- \(2 - 3 = 5\) Hier sagen wir, dass \(2 - 3\) gleich \(5\) ist. Bestandteile einer Gleichung:
+- Variablen: Das sind Buchstaben (wie \(x\) oder \(y\)), die für unbekannte Zahlen stehen.
+- Zahlen: Feste Werte, wie \(3\) oder \(5\).
+- Operationen: Das sind Dinge wie Addition (- ), Subtraktion (-), Multiplikation (×) und Division (÷). Warum sind Gleichungen wichtig?
+Gleichungen helfen uns, Probleme zu lösen und herauszuf
+2026-04-07 17:19:33,025 DEBUG Chatbot request message=gleichung history=['ausführlicher bitte', 'Natürlich! Hier ist eine ausführliche Anleitung, wie du Gleichungen löst, Schritt für Schritt:\n\n### 1. **Verstehe die Gleichung**\n   - Eine Gleichung hat die Form \\(A = B\\), wobei \\(A\\) und \\(B\\) Ausdrücke sind, die gleich sind. Das Ziel ist es, die Variable (z.B. \\(x\\)) zu isolieren.\n\n### 2. **Schritte zum Lösen von Gleichungen**\n\n#### Beispiel: \\(2x + 3 = 11\\)\n\n#### Schritt 1: Subtrahiere oder addiere, um die Konstante zu isolieren\n   - Beginne damit, die Konstante (in diesem Fall die \\(3\\)) von der linken Seite zu entfernen.\n   - Subtrahiere \\(3\\) von beiden Seiten der Gleichung:\n     \\[\n     2x + 3 - 3 = 11 - 3\n     \\]', 'erkläre gleichungen', 'Gleichungen sind fundamentale Konzepte in der Mathematik, die eine Beziehung zwischen zwei Ausdrücken darstellen. Hier ist eine detaillierte Erklärung, was Gleichungen sind, wie sie funktionieren und wie man sie löst. 1. **Definition einer Gleichung**\nEine Gleichung ist eine mathematische Aussage, die besagt, dass zwei Ausdrücke gleich sind. Sie wird durch das Gleichheitszeichen \\(=\\) dargestellt. Zum Beispiel:\n- \\(2x + 3 = 11\\) In diesem Beispiel sind \\(2x + 3\\) und \\(11\\) die beiden Ausdrücke, die gleich sind. 2. **Bestandteile einer Gleichung**\n- **Variablen**: Symbole, die unbekannte Werte repräsentieren, wie \\(x\\) oder \\(y\\).\n- **Konstanten**: Feste Werte, die in der Gleichung vorkommen, wie \\(3\\) oder \\(11\\).\n- ', 'erkläre gleichungen', 'Gerne! Lass uns Gleichungen einfach erklären. Was ist eine Gleichung?\nEine Gleichung ist wie eine mathematische Aussage, die sagt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen \\(=\\). Beispiel:\nStell dir vor, du hast eine Gleichung wie diese:\n- \\(2 - 3 = 5\\) Hier sagen wir, dass \\(2 - 3\\) gleich \\(5\\) ist. Bestandteile einer Gleichung:\n- Variablen: Das sind Buchstaben (wie \\(x\\) oder \\(y\\)), die für unbekannte Zahlen stehen.\n- Zahlen: Feste Werte, wie \\(3\\) oder \\(5\\).\n- Operationen: Das sind Dinge wie Addition (- ), Subtraktion (-), Multiplikation (×) und Division (÷). Warum sind Gleichungen wichtig?\nGleichungen helfen uns, Probleme zu lösen und herauszuf']
+2026-04-07 17:19:37,858 INFO Chatbot response generated: Eine Gleichung ist eine mathematische Aussage, die zeigt, dass zwei Dinge gleich sind. Sie sieht so aus: - Zum Beispiel: \(3 - 2 = 5\) Hier sagen wir, dass \(3 - 2\) gleich \(5\) ist. Wichtige Teile einer Gleichung: - Variablen: Das sind Buchstaben wie \(x\) oder \(y\), die für unbekannte Zahlen stehen. - Zahlen: Feste Werte, wie \(3\) oder \(5\). - Operationen: Das sind die Rechenarten, die wir verwenden: - Addition (- ) - Subtraktion (−) - Multiplikation (×) - Division (÷) Beispiel einer Gleichung: Nehmen wir die Gleichung:
+- \(x - 4 = 10\) Hier ist \(x\) die Variable. Wir wollen herausfinden
+2026-04-07 17:19:51,312 DEBUG Chatbot request message=du hure history=['erkläre gleichungen', 'Gleichungen sind fundamentale Konzepte in der Mathematik, die eine Beziehung zwischen zwei Ausdrücken darstellen. Hier ist eine detaillierte Erklärung, was Gleichungen sind, wie sie funktionieren und wie man sie löst. 1. **Definition einer Gleichung**\nEine Gleichung ist eine mathematische Aussage, die besagt, dass zwei Ausdrücke gleich sind. Sie wird durch das Gleichheitszeichen \\(=\\) dargestellt. Zum Beispiel:\n- \\(2x + 3 = 11\\) In diesem Beispiel sind \\(2x + 3\\) und \\(11\\) die beiden Ausdrücke, die gleich sind. 2. **Bestandteile einer Gleichung**\n- **Variablen**: Symbole, die unbekannte Werte repräsentieren, wie \\(x\\) oder \\(y\\).\n- **Konstanten**: Feste Werte, die in der Gleichung vorkommen, wie \\(3\\) oder \\(11\\).\n- ', 'erkläre gleichungen', 'Gerne! Lass uns Gleichungen einfach erklären. Was ist eine Gleichung?\nEine Gleichung ist wie eine mathematische Aussage, die sagt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen \\(=\\). Beispiel:\nStell dir vor, du hast eine Gleichung wie diese:\n- \\(2 - 3 = 5\\) Hier sagen wir, dass \\(2 - 3\\) gleich \\(5\\) ist. Bestandteile einer Gleichung:\n- Variablen: Das sind Buchstaben (wie \\(x\\) oder \\(y\\)), die für unbekannte Zahlen stehen.\n- Zahlen: Feste Werte, wie \\(3\\) oder \\(5\\).\n- Operationen: Das sind Dinge wie Addition (- ), Subtraktion (-), Multiplikation (×) und Division (÷). Warum sind Gleichungen wichtig?\nGleichungen helfen uns, Probleme zu lösen und herauszuf', 'gleichung', 'Eine Gleichung ist eine mathematische Aussage, die zeigt, dass zwei Dinge gleich sind. Sie sieht so aus: - Zum Beispiel: \\(3 - 2 = 5\\) Hier sagen wir, dass \\(3 - 2\\) gleich \\(5\\) ist. Wichtige Teile einer Gleichung: - Variablen: Das sind Buchstaben wie \\(x\\) oder \\(y\\), die für unbekannte Zahlen stehen. - Zahlen: Feste Werte, wie \\(3\\) oder \\(5\\). - Operationen: Das sind die Rechenarten, die wir verwenden: - Addition (- ) - Subtraktion (−) - Multiplikation (×) - Division (÷) Beispiel einer Gleichung: Nehmen wir die Gleichung:\n- \\(x - 4 = 10\\) Hier ist \\(x\\) die Variable. Wir wollen herausfinden']
+2026-04-07 17:19:52,780 INFO Chatbot response generated: Es tut mir leid, aber ich kann auf respektlose oder beleidigende Fragen nicht eingehen. Wenn du eine andere Frage hast oder etwas lernen möchtest, helfe ich dir gerne weiter!
+2026-04-07 17:21:02,590 DEBUG Chatbot request message=wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze history=['erkläre gleichungen', 'Gerne! Lass uns Gleichungen einfach erklären. Was ist eine Gleichung?\nEine Gleichung ist wie eine mathematische Aussage, die sagt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen \\(=\\). Beispiel:\nStell dir vor, du hast eine Gleichung wie diese:\n- \\(2 - 3 = 5\\) Hier sagen wir, dass \\(2 - 3\\) gleich \\(5\\) ist. Bestandteile einer Gleichung:\n- Variablen: Das sind Buchstaben (wie \\(x\\) oder \\(y\\)), die für unbekannte Zahlen stehen.\n- Zahlen: Feste Werte, wie \\(3\\) oder \\(5\\).\n- Operationen: Das sind Dinge wie Addition (- ), Subtraktion (-), Multiplikation (×) und Division (÷). Warum sind Gleichungen wichtig?\nGleichungen helfen uns, Probleme zu lösen und herauszuf', 'gleichung', 'Eine Gleichung ist eine mathematische Aussage, die zeigt, dass zwei Dinge gleich sind. Sie sieht so aus: - Zum Beispiel: \\(3 - 2 = 5\\) Hier sagen wir, dass \\(3 - 2\\) gleich \\(5\\) ist. Wichtige Teile einer Gleichung: - Variablen: Das sind Buchstaben wie \\(x\\) oder \\(y\\), die für unbekannte Zahlen stehen. - Zahlen: Feste Werte, wie \\(3\\) oder \\(5\\). - Operationen: Das sind die Rechenarten, die wir verwenden: - Addition (- ) - Subtraktion (−) - Multiplikation (×) - Division (÷) Beispiel einer Gleichung: Nehmen wir die Gleichung:\n- \\(x - 4 = 10\\) Hier ist \\(x\\) die Variable. Wir wollen herausfinden', 'du hure', 'Es tut mir leid, aber ich kann auf respektlose oder beleidigende Fragen nicht eingehen. Wenn du eine andere Frage hast oder etwas lernen möchtest, helfe ich dir gerne weiter!']
+2026-04-07 17:21:07,358 INFO Chatbot response generated: Natürlich! Hier sind drei einfache Schritte, um Gleichungen zu lösen. Ich erkläre jeden Schritt genau. Schritt 1: Verstehe die Gleichung
+Zuerst musst du wissen, was die Gleichung sagt. Schau dir die Zahlen und Variablen an. Eine Gleichung sieht oft so aus: - \(x - 5 = 12\) Hier ist \(x\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \(x\) plus \(5\) gleich \(12\) ist. Schritt 2: Isoliere die Variable
+Jetzt wollen wir \(x\) alleine auf einer Seite der Gleichung haben. Das machen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:
+- Wir haben \(x - 5 = 12\).
+- Um \(x\) zu isolieren, ziehen wir \(5\) von beiden Seiten ab. - Das
+2026-04-07 17:22:14,461 DEBUG Chatbot request message=wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze history=['gleichung', 'Eine Gleichung ist eine mathematische Aussage, die zeigt, dass zwei Dinge gleich sind. Sie sieht so aus: - Zum Beispiel: \\(3 - 2 = 5\\) Hier sagen wir, dass \\(3 - 2\\) gleich \\(5\\) ist. Wichtige Teile einer Gleichung: - Variablen: Das sind Buchstaben wie \\(x\\) oder \\(y\\), die für unbekannte Zahlen stehen. - Zahlen: Feste Werte, wie \\(3\\) oder \\(5\\). - Operationen: Das sind die Rechenarten, die wir verwenden: - Addition (- ) - Subtraktion (−) - Multiplikation (×) - Division (÷) Beispiel einer Gleichung: Nehmen wir die Gleichung:\n- \\(x - 4 = 10\\) Hier ist \\(x\\) die Variable. Wir wollen herausfinden', 'du hure', 'Es tut mir leid, aber ich kann auf respektlose oder beleidigende Fragen nicht eingehen. Wenn du eine andere Frage hast oder etwas lernen möchtest, helfe ich dir gerne weiter!', 'wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze', 'Natürlich! Hier sind drei einfache Schritte, um Gleichungen zu lösen. Ich erkläre jeden Schritt genau. Schritt 1: Verstehe die Gleichung\nZuerst musst du wissen, was die Gleichung sagt. Schau dir die Zahlen und Variablen an. Eine Gleichung sieht oft so aus: - \\(x - 5 = 12\\) Hier ist \\(x\\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \\(x\\) plus \\(5\\) gleich \\(12\\) ist. Schritt 2: Isoliere die Variable\nJetzt wollen wir \\(x\\) alleine auf einer Seite der Gleichung haben. Das machen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:\n- Wir haben \\(x - 5 = 12\\).\n- Um \\(x\\) zu isolieren, ziehen wir \\(5\\) von beiden Seiten ab. - Das']
+2026-04-07 17:22:19,317 INFO Chatbot response generated: Gerne erkläre ich dir, wie du Gleichungen in drei einfachen Schritten lösen kannst! Hier ist eine ausführliche Erklärung: Schritt 1: Verstehe die Gleichung
+Zuerst musst du die Gleichung genau anschauen. Eine Gleichung besteht aus zwei Seiten, die durch ein Gleichheitszeichen (=) getrennt sind. Zum Beispiel: - \(x - 3 = 10\) Hier ist \(x\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \(x\) plus \(3\) gleich \(10\) ist. Schritt 2: Isoliere die Variable
+Jetzt wollen wir die Variable \(x\) alleine auf einer Seite der Gleichung haben. Das erreichen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:
+- Wir haben \(x - 3 = 10\).
+- Um \(x\) zu isolieren, ziehen wir \(
+2026-04-07 17:22:28,159 DEBUG Chatbot request message=gleichung history=['du hure', 'Es tut mir leid, aber ich kann auf respektlose oder beleidigende Fragen nicht eingehen. Wenn du eine andere Frage hast oder etwas lernen möchtest, helfe ich dir gerne weiter!', 'wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze', 'Natürlich! Hier sind drei einfache Schritte, um Gleichungen zu lösen. Ich erkläre jeden Schritt genau. Schritt 1: Verstehe die Gleichung\nZuerst musst du wissen, was die Gleichung sagt. Schau dir die Zahlen und Variablen an. Eine Gleichung sieht oft so aus: - \\(x - 5 = 12\\) Hier ist \\(x\\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \\(x\\) plus \\(5\\) gleich \\(12\\) ist. Schritt 2: Isoliere die Variable\nJetzt wollen wir \\(x\\) alleine auf einer Seite der Gleichung haben. Das machen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:\n- Wir haben \\(x - 5 = 12\\).\n- Um \\(x\\) zu isolieren, ziehen wir \\(5\\) von beiden Seiten ab. - Das', 'wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze', 'Gerne erkläre ich dir, wie du Gleichungen in drei einfachen Schritten lösen kannst! Hier ist eine ausführliche Erklärung: Schritt 1: Verstehe die Gleichung\nZuerst musst du die Gleichung genau anschauen. Eine Gleichung besteht aus zwei Seiten, die durch ein Gleichheitszeichen (=) getrennt sind. Zum Beispiel: - \\(x - 3 = 10\\) Hier ist \\(x\\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \\(x\\) plus \\(3\\) gleich \\(10\\) ist. Schritt 2: Isoliere die Variable\nJetzt wollen wir die Variable \\(x\\) alleine auf einer Seite der Gleichung haben. Das erreichen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:\n- Wir haben \\(x - 3 = 10\\).\n- Um \\(x\\) zu isolieren, ziehen wir \\(']
+2026-04-07 17:22:32,792 INFO Chatbot response generated: Eine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat immer ein Gleichheitszeichen (=). Hier sind einige einfache Schritte, um eine Gleichung zu verstehen und zu lösen: - Schau dir die Gleichung an Zum Beispiel: \(x - 4 = 10\) Hier ist \(x\) die Zahl, die wir herausfinden wollen. - Isoliere die Variable Um \(x\) zu finden, müssen wir die \(4\) auf die andere Seite bringen. Das machen wir, indem wir \(4\) von beiden Seiten abziehen. Also: \(x - 4 - 4 = 10 - 4\) Das vereinfacht sich zu: \(x = 6\) - Überprüfe deine Antwort Setze \(x\) zurück in die ursprüngliche Gleichung ein
+2026-04-07 17:23:33,783 INFO OpenRouter key loaded: True
+2026-04-07 17:23:38,809 INFO OpenRouter key loaded: True
+2026-04-07 17:23:39,925 INFO OpenRouter key loaded: True
+2026-04-07 17:23:40,151 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:23:40,152 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 17:23:40,157 DEBUG Chatbot request message=Test history=[]
+2026-04-07 17:23:40,159 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 675, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 17:23:40,171 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 21:09:37,535 DEBUG Chatbot request message=gleichung history=['wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze', 'Natürlich! Hier sind drei einfache Schritte, um Gleichungen zu lösen. Ich erkläre jeden Schritt genau. Schritt 1: Verstehe die Gleichung\nZuerst musst du wissen, was die Gleichung sagt. Schau dir die Zahlen und Variablen an. Eine Gleichung sieht oft so aus: - \\(x - 5 = 12\\) Hier ist \\(x\\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \\(x\\) plus \\(5\\) gleich \\(12\\) ist. Schritt 2: Isoliere die Variable\nJetzt wollen wir \\(x\\) alleine auf einer Seite der Gleichung haben. Das machen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:\n- Wir haben \\(x - 5 = 12\\).\n- Um \\(x\\) zu isolieren, ziehen wir \\(5\\) von beiden Seiten ab. - Das', 'wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze', 'Gerne erkläre ich dir, wie du Gleichungen in drei einfachen Schritten lösen kannst! Hier ist eine ausführliche Erklärung: Schritt 1: Verstehe die Gleichung\nZuerst musst du die Gleichung genau anschauen. Eine Gleichung besteht aus zwei Seiten, die durch ein Gleichheitszeichen (=) getrennt sind. Zum Beispiel: - \\(x - 3 = 10\\) Hier ist \\(x\\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \\(x\\) plus \\(3\\) gleich \\(10\\) ist. Schritt 2: Isoliere die Variable\nJetzt wollen wir die Variable \\(x\\) alleine auf einer Seite der Gleichung haben. Das erreichen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:\n- Wir haben \\(x - 3 = 10\\).\n- Um \\(x\\) zu isolieren, ziehen wir \\(', 'gleichung', 'Eine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat immer ein Gleichheitszeichen (=). Hier sind einige einfache Schritte, um eine Gleichung zu verstehen und zu lösen: - Schau dir die Gleichung an Zum Beispiel: \\(x - 4 = 10\\) Hier ist \\(x\\) die Zahl, die wir herausfinden wollen. - Isoliere die Variable Um \\(x\\) zu finden, müssen wir die \\(4\\) auf die andere Seite bringen. Das machen wir, indem wir \\(4\\) von beiden Seiten abziehen. Also: \\(x - 4 - 4 = 10 - 4\\) Das vereinfacht sich zu: \\(x = 6\\) - Überprüfe deine Antwort Setze \\(x\\) zurück in die ursprüngliche Gleichung ein']
+2026-04-07 21:09:42,864 INFO Chatbot response generated: Eine Gleichung ist ein mathematischer Satz, der zeigt, dass zwei Ausdrücke gleich sind. Sie enthält ein Gleichheitszeichen (=). Zum Beispiel: - \(2 - 3 = 5\) Das bedeutet, dass die linke Seite (2 - 3) und die rechte Seite (5) gleich sind. Hier sind einige wichtige Punkte über Gleichungen: - Variablen: Manchmal gibt es in einer Gleichung eine Variable, wie \(x\) oder \(y\). Das ist eine Unbekannte, die wir herausfinden wollen. Zum Beispiel in der Gleichung \(x - 2 = 5\) ist \(x\) die Variable. - Lösen von Gleichungen: Um die Lösung für die Variable zu finden, musst du die Gleichung umformen. Das bedeutet, du musst die Variable auf eine Seite der Gleichung bringen. Zum Beispiel: - In der Gleichung \(x - 
+2026-04-07 21:11:06,537 DEBUG Chatbot request message=gleichung history=['wie rechne ich gleichungen ind 3 einfachen schritten? auführliche, einfache erklärung über einelne absätze', 'Gerne erkläre ich dir, wie du Gleichungen in drei einfachen Schritten lösen kannst! Hier ist eine ausführliche Erklärung: Schritt 1: Verstehe die Gleichung\nZuerst musst du die Gleichung genau anschauen. Eine Gleichung besteht aus zwei Seiten, die durch ein Gleichheitszeichen (=) getrennt sind. Zum Beispiel: - \\(x - 3 = 10\\) Hier ist \\(x\\) die Variable, die wir herausfinden wollen. Die Gleichung sagt, dass \\(x\\) plus \\(3\\) gleich \\(10\\) ist. Schritt 2: Isoliere die Variable\nJetzt wollen wir die Variable \\(x\\) alleine auf einer Seite der Gleichung haben. Das erreichen wir, indem wir die gleiche Operation auf beiden Seiten der Gleichung anwenden. In unserem Beispiel:\n- Wir haben \\(x - 3 = 10\\).\n- Um \\(x\\) zu isolieren, ziehen wir \\(', 'gleichung', 'Eine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat immer ein Gleichheitszeichen (=). Hier sind einige einfache Schritte, um eine Gleichung zu verstehen und zu lösen: - Schau dir die Gleichung an Zum Beispiel: \\(x - 4 = 10\\) Hier ist \\(x\\) die Zahl, die wir herausfinden wollen. - Isoliere die Variable Um \\(x\\) zu finden, müssen wir die \\(4\\) auf die andere Seite bringen. Das machen wir, indem wir \\(4\\) von beiden Seiten abziehen. Also: \\(x - 4 - 4 = 10 - 4\\) Das vereinfacht sich zu: \\(x = 6\\) - Überprüfe deine Antwort Setze \\(x\\) zurück in die ursprüngliche Gleichung ein', 'gleichung', 'Eine Gleichung ist ein mathematischer Satz, der zeigt, dass zwei Ausdrücke gleich sind. Sie enthält ein Gleichheitszeichen (=). Zum Beispiel: - \\(2 - 3 = 5\\) Das bedeutet, dass die linke Seite (2 - 3) und die rechte Seite (5) gleich sind. Hier sind einige wichtige Punkte über Gleichungen: - Variablen: Manchmal gibt es in einer Gleichung eine Variable, wie \\(x\\) oder \\(y\\). Das ist eine Unbekannte, die wir herausfinden wollen. Zum Beispiel in der Gleichung \\(x - 2 = 5\\) ist \\(x\\) die Variable. - Lösen von Gleichungen: Um die Lösung für die Variable zu finden, musst du die Gleichung umformen. Das bedeutet, du musst die Variable auf eine Seite der Gleichung bringen. Zum Beispiel: - In der Gleichung \\(x - ']
+2026-04-07 21:11:11,839 INFO Chatbot response generated: Es sieht so aus, als ob du mehr Informationen über Gleichungen möchtest. Lass uns das Thema Schritt für Schritt durchgehen. Was ist eine Gleichung?
+Eine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen (=). Zum Beispiel: \(3 - 2 = 5\). Das bedeutet, dass die linke Seite (3 - 2) und die rechte Seite (5) gleich sind. Was sind Variablen?
+In vielen Gleichungen gibt es Variablen. Das sind Buchstaben wie \(x\) oder \(y\), die für unbekannte Zahlen stehen. Zum Beispiel in der Gleichung \(x - 3 = 7\) ist \(x\) die Variable, die wir herausfinden wollen. Wie löse ich eine Gleichung?
+Hier sind die Schritte, um eine einfache Gleichung zu lösen: - Verstehe die Gleichung: Schau dir die Gleichung genau
+2026-04-07 21:19:32,970 DEBUG Chatbot request message=wie löse ich sie history=['gleichung', 'Eine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat immer ein Gleichheitszeichen (=). Hier sind einige einfache Schritte, um eine Gleichung zu verstehen und zu lösen: - Schau dir die Gleichung an Zum Beispiel: \\(x - 4 = 10\\) Hier ist \\(x\\) die Zahl, die wir herausfinden wollen. - Isoliere die Variable Um \\(x\\) zu finden, müssen wir die \\(4\\) auf die andere Seite bringen. Das machen wir, indem wir \\(4\\) von beiden Seiten abziehen. Also: \\(x - 4 - 4 = 10 - 4\\) Das vereinfacht sich zu: \\(x = 6\\) - Überprüfe deine Antwort Setze \\(x\\) zurück in die ursprüngliche Gleichung ein', 'gleichung', 'Eine Gleichung ist ein mathematischer Satz, der zeigt, dass zwei Ausdrücke gleich sind. Sie enthält ein Gleichheitszeichen (=). Zum Beispiel: - \\(2 - 3 = 5\\) Das bedeutet, dass die linke Seite (2 - 3) und die rechte Seite (5) gleich sind. Hier sind einige wichtige Punkte über Gleichungen: - Variablen: Manchmal gibt es in einer Gleichung eine Variable, wie \\(x\\) oder \\(y\\). Das ist eine Unbekannte, die wir herausfinden wollen. Zum Beispiel in der Gleichung \\(x - 2 = 5\\) ist \\(x\\) die Variable. - Lösen von Gleichungen: Um die Lösung für die Variable zu finden, musst du die Gleichung umformen. Das bedeutet, du musst die Variable auf eine Seite der Gleichung bringen. Zum Beispiel: - In der Gleichung \\(x - ', 'gleichung', 'Es sieht so aus, als ob du mehr Informationen über Gleichungen möchtest. Lass uns das Thema Schritt für Schritt durchgehen. Was ist eine Gleichung?\nEine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen (=). Zum Beispiel: \\(3 - 2 = 5\\). Das bedeutet, dass die linke Seite (3 - 2) und die rechte Seite (5) gleich sind. Was sind Variablen?\nIn vielen Gleichungen gibt es Variablen. Das sind Buchstaben wie \\(x\\) oder \\(y\\), die für unbekannte Zahlen stehen. Zum Beispiel in der Gleichung \\(x - 3 = 7\\) ist \\(x\\) die Variable, die wir herausfinden wollen. Wie löse ich eine Gleichung?\nHier sind die Schritte, um eine einfache Gleichung zu lösen: - Verstehe die Gleichung: Schau dir die Gleichung genau']
+2026-04-07 21:19:36,230 INFO Chatbot response generated: Um eine Gleichung zu lösen, folge diesen einfachen Schritten. Ich erkläre es dir anhand eines Beispiels. Nehmen wir die Gleichung: \(x - 5 = 12\). - Verstehe die Gleichung: Hier wollen wir herausfinden, was \(x\) ist. Die Gleichung sagt, dass \(x\) plus 5 gleich 12 ist. - Isoliere die Variable: Das bedeutet, du musst \(x\) alleine auf einer Seite der Gleichung haben. Um das zu erreichen, musst du 5 von beiden Seiten der Gleichung abziehen. - Also: \(x - 5 - 5 = 12 - 5\) Das vereinfacht sich zu: \(x = 7\). - Überprüfe deine Antwort: Setze \(x\) wieder in die ursprüngliche Gleichung ein, um sicherzustellen, dass es richtig ist.
+2026-04-07 21:20:17,461 INFO OpenRouter key loaded: True
+2026-04-07 21:20:18,836 INFO OpenRouter key loaded: True
+2026-04-07 21:20:19,057 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:20:19,058 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 21:20:19,064 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:20:19,066 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 674, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 21:20:19,078 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 21:21:00,502 INFO OpenRouter key loaded: True
+2026-04-07 21:21:02,429 INFO OpenRouter key loaded: True
+2026-04-07 21:21:03,399 INFO OpenRouter key loaded: True
+2026-04-07 21:21:03,672 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:21:03,673 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 21:21:03,679 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:21:03,681 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 674, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 21:21:03,694 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 21:21:14,982 DEBUG Chatbot request message=wie löse ich sie history=['gleichung', 'Eine Gleichung ist ein mathematischer Satz, der zeigt, dass zwei Ausdrücke gleich sind. Sie enthält ein Gleichheitszeichen (=). Zum Beispiel: - \\(2 - 3 = 5\\) Das bedeutet, dass die linke Seite (2 - 3) und die rechte Seite (5) gleich sind. Hier sind einige wichtige Punkte über Gleichungen: - Variablen: Manchmal gibt es in einer Gleichung eine Variable, wie \\(x\\) oder \\(y\\). Das ist eine Unbekannte, die wir herausfinden wollen. Zum Beispiel in der Gleichung \\(x - 2 = 5\\) ist \\(x\\) die Variable. - Lösen von Gleichungen: Um die Lösung für die Variable zu finden, musst du die Gleichung umformen. Das bedeutet, du musst die Variable auf eine Seite der Gleichung bringen. Zum Beispiel: - In der Gleichung \\(x - ', 'gleichung', 'Es sieht so aus, als ob du mehr Informationen über Gleichungen möchtest. Lass uns das Thema Schritt für Schritt durchgehen. Was ist eine Gleichung?\nEine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen (=). Zum Beispiel: \\(3 - 2 = 5\\). Das bedeutet, dass die linke Seite (3 - 2) und die rechte Seite (5) gleich sind. Was sind Variablen?\nIn vielen Gleichungen gibt es Variablen. Das sind Buchstaben wie \\(x\\) oder \\(y\\), die für unbekannte Zahlen stehen. Zum Beispiel in der Gleichung \\(x - 3 = 7\\) ist \\(x\\) die Variable, die wir herausfinden wollen. Wie löse ich eine Gleichung?\nHier sind die Schritte, um eine einfache Gleichung zu lösen: - Verstehe die Gleichung: Schau dir die Gleichung genau', 'wie löse ich sie', 'Um eine Gleichung zu lösen, folge diesen einfachen Schritten. Ich erkläre es dir anhand eines Beispiels. Nehmen wir die Gleichung: \\(x - 5 = 12\\). - Verstehe die Gleichung: Hier wollen wir herausfinden, was \\(x\\) ist. Die Gleichung sagt, dass \\(x\\) plus 5 gleich 12 ist. - Isoliere die Variable: Das bedeutet, du musst \\(x\\) alleine auf einer Seite der Gleichung haben. Um das zu erreichen, musst du 5 von beiden Seiten der Gleichung abziehen. - Also: \\(x - 5 - 5 = 12 - 5\\) Das vereinfacht sich zu: \\(x = 7\\). - Überprüfe deine Antwort: Setze \\(x\\) wieder in die ursprüngliche Gleichung ein, um sicherzustellen, dass es richtig ist.']
+2026-04-07 21:21:18,585 INFO Chatbot response generated: Ich helfe dir gerne dabei, zu lernen, wie man eine Gleichung löst! Lass uns das Schritt für Schritt durchgehen. Wir nehmen als Beispiel die Gleichung \(x + 4 = 10\). 1. Verstehe die Gleichung: In dieser Gleichung steht, dass \(x\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \(x\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \(x\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schreibe die Schritte auf: - Du hast: \(x + 4 = 10\) - Ziehe 4 von beiden Seiten ab: \(x + 4 - 4 = 10 - 4\) - Das vereinfacht sich zu: \(x =
+2026-04-07 21:21:28,373 DEBUG Chatbot request message=wie? history=['gleichung', 'Es sieht so aus, als ob du mehr Informationen über Gleichungen möchtest. Lass uns das Thema Schritt für Schritt durchgehen. Was ist eine Gleichung?\nEine Gleichung ist ein mathematischer Ausdruck, der zeigt, dass zwei Dinge gleich sind. Sie hat ein Gleichheitszeichen (=). Zum Beispiel: \\(3 - 2 = 5\\). Das bedeutet, dass die linke Seite (3 - 2) und die rechte Seite (5) gleich sind. Was sind Variablen?\nIn vielen Gleichungen gibt es Variablen. Das sind Buchstaben wie \\(x\\) oder \\(y\\), die für unbekannte Zahlen stehen. Zum Beispiel in der Gleichung \\(x - 3 = 7\\) ist \\(x\\) die Variable, die wir herausfinden wollen. Wie löse ich eine Gleichung?\nHier sind die Schritte, um eine einfache Gleichung zu lösen: - Verstehe die Gleichung: Schau dir die Gleichung genau', 'wie löse ich sie', 'Um eine Gleichung zu lösen, folge diesen einfachen Schritten. Ich erkläre es dir anhand eines Beispiels. Nehmen wir die Gleichung: \\(x - 5 = 12\\). - Verstehe die Gleichung: Hier wollen wir herausfinden, was \\(x\\) ist. Die Gleichung sagt, dass \\(x\\) plus 5 gleich 12 ist. - Isoliere die Variable: Das bedeutet, du musst \\(x\\) alleine auf einer Seite der Gleichung haben. Um das zu erreichen, musst du 5 von beiden Seiten der Gleichung abziehen. - Also: \\(x - 5 - 5 = 12 - 5\\) Das vereinfacht sich zu: \\(x = 7\\). - Überprüfe deine Antwort: Setze \\(x\\) wieder in die ursprüngliche Gleichung ein, um sicherzustellen, dass es richtig ist.', 'wie löse ich sie', 'Ich helfe dir gerne dabei, zu lernen, wie man eine Gleichung löst! Lass uns das Schritt für Schritt durchgehen. Wir nehmen als Beispiel die Gleichung \\(x + 4 = 10\\). 1. Verstehe die Gleichung: In dieser Gleichung steht, dass \\(x\\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \\(x\\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schreibe die Schritte auf: - Du hast: \\(x + 4 = 10\\) - Ziehe 4 von beiden Seiten ab: \\(x + 4 - 4 = 10 - 4\\) - Das vereinfacht sich zu: \\(x =']
+2026-04-07 21:21:32,194 INFO Chatbot response generated: Okay, lass uns noch einmal ganz genau schauen, wie man eine Gleichung löst. Ich erkläre es dir Schritt für Schritt. Nehmen wir die Gleichung \(x + 4 = 10\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \(x\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \(x\) ist. 2. Isoliere die Variable: Das bedeutet, wir müssen \(x\) alleine auf einer Seite der Gleichung haben. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \(x + 4 = 10\) - Ziehe 4 von beiden Seiten ab: - Auf der linken Seite: \(x + 4 - 4\) wird zu \(x\)
+2026-04-07 21:22:06,650 INFO OpenRouter key loaded: True
+2026-04-07 21:22:07,866 INFO OpenRouter key loaded: True
+2026-04-07 21:22:08,089 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:22:08,091 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 21:22:08,097 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:22:08,099 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 675, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 21:22:08,110 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 21:22:26,087 DEBUG Chatbot request message=wie? history=['wie löse ich sie', 'Um eine Gleichung zu lösen, folge diesen einfachen Schritten. Ich erkläre es dir anhand eines Beispiels. Nehmen wir die Gleichung: \\(x - 5 = 12\\). - Verstehe die Gleichung: Hier wollen wir herausfinden, was \\(x\\) ist. Die Gleichung sagt, dass \\(x\\) plus 5 gleich 12 ist. - Isoliere die Variable: Das bedeutet, du musst \\(x\\) alleine auf einer Seite der Gleichung haben. Um das zu erreichen, musst du 5 von beiden Seiten der Gleichung abziehen. - Also: \\(x - 5 - 5 = 12 - 5\\) Das vereinfacht sich zu: \\(x = 7\\). - Überprüfe deine Antwort: Setze \\(x\\) wieder in die ursprüngliche Gleichung ein, um sicherzustellen, dass es richtig ist.', 'wie löse ich sie', 'Ich helfe dir gerne dabei, zu lernen, wie man eine Gleichung löst! Lass uns das Schritt für Schritt durchgehen. Wir nehmen als Beispiel die Gleichung \\(x + 4 = 10\\). 1. Verstehe die Gleichung: In dieser Gleichung steht, dass \\(x\\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \\(x\\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schreibe die Schritte auf: - Du hast: \\(x + 4 = 10\\) - Ziehe 4 von beiden Seiten ab: \\(x + 4 - 4 = 10 - 4\\) - Das vereinfacht sich zu: \\(x =', 'wie?', 'Okay, lass uns noch einmal ganz genau schauen, wie man eine Gleichung löst. Ich erkläre es dir Schritt für Schritt. Nehmen wir die Gleichung \\(x + 4 = 10\\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \\(x\\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, wir müssen \\(x\\) alleine auf einer Seite der Gleichung haben. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \\(x + 4 = 10\\) - Ziehe 4 von beiden Seiten ab: - Auf der linken Seite: \\(x + 4 - 4\\) wird zu \\(x\\)']
+2026-04-07 21:22:30,106 INFO Chatbot response generated: Ich verstehe, dass du mehr Informationen brauchst! Lass uns noch einmal Schritt für Schritt durchgehen, wie man eine Gleichung löst. Ich werde es ganz einfach erklären. Nehmen wir die Gleichung \(x + 3 = 7\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \(x\) plus 3 gleich 7 ist. Wir wollen herausfinden, was \(x\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \(x\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \(x + 3 = 7\) - Ziehe 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: \(x
+2026-04-07 21:23:16,033 INFO OpenRouter key loaded: True
+2026-04-07 21:23:17,019 INFO OpenRouter key loaded: True
+2026-04-07 21:23:17,243 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:23:17,245 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-07 21:23:17,252 DEBUG Chatbot request message=Test history=[]
+2026-04-07 21:23:17,253 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 679, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 119, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-07 21:23:17,267 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-07 21:23:28,854 DEBUG Chatbot request message=wie? history=['wie löse ich sie', 'Ich helfe dir gerne dabei, zu lernen, wie man eine Gleichung löst! Lass uns das Schritt für Schritt durchgehen. Wir nehmen als Beispiel die Gleichung \\(x + 4 = 10\\). 1. Verstehe die Gleichung: In dieser Gleichung steht, dass \\(x\\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \\(x\\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schreibe die Schritte auf: - Du hast: \\(x + 4 = 10\\) - Ziehe 4 von beiden Seiten ab: \\(x + 4 - 4 = 10 - 4\\) - Das vereinfacht sich zu: \\(x =', 'wie?', 'Okay, lass uns noch einmal ganz genau schauen, wie man eine Gleichung löst. Ich erkläre es dir Schritt für Schritt. Nehmen wir die Gleichung \\(x + 4 = 10\\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \\(x\\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, wir müssen \\(x\\) alleine auf einer Seite der Gleichung haben. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \\(x + 4 = 10\\) - Ziehe 4 von beiden Seiten ab: - Auf der linken Seite: \\(x + 4 - 4\\) wird zu \\(x\\)', 'wie?', 'Ich verstehe, dass du mehr Informationen brauchst! Lass uns noch einmal Schritt für Schritt durchgehen, wie man eine Gleichung löst. Ich werde es ganz einfach erklären. Nehmen wir die Gleichung \\(x + 3 = 7\\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \\(x\\) plus 3 gleich 7 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \\(x\\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \\(x + 3 = 7\\) - Ziehe 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: \\(x']
+2026-04-07 21:23:33,245 INFO Chatbot response generated: Okay, lass uns die Schritte noch einmal ganz genau durchgehen, damit es klar wird. Wir nehmen die Gleichung (x + 3 = 7) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 3 gleich 7 ist. Das bedeutet, wenn wir 3 zu (x) hinzufügen, erhalten wir 7. Wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 3 = 7). - Jetzt ziehst du 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: (x +
+2026-04-08 14:27:00,562 INFO OpenRouter key loaded: True
+2026-04-08 14:27:01,553 INFO OpenRouter key loaded: True
+2026-04-08 14:27:19,629 DEBUG Chatbot request message=wie? history=['wie?', 'Okay, lass uns noch einmal ganz genau schauen, wie man eine Gleichung löst. Ich erkläre es dir Schritt für Schritt. Nehmen wir die Gleichung \\(x + 4 = 10\\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \\(x\\) plus 4 gleich 10 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, wir müssen \\(x\\) alleine auf einer Seite der Gleichung haben. Um das zu tun, müssen wir 4 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \\(x + 4 = 10\\) - Ziehe 4 von beiden Seiten ab: - Auf der linken Seite: \\(x + 4 - 4\\) wird zu \\(x\\)', 'wie?', 'Ich verstehe, dass du mehr Informationen brauchst! Lass uns noch einmal Schritt für Schritt durchgehen, wie man eine Gleichung löst. Ich werde es ganz einfach erklären. Nehmen wir die Gleichung \\(x + 3 = 7\\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \\(x\\) plus 3 gleich 7 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \\(x\\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \\(x + 3 = 7\\) - Ziehe 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: \\(x', 'wie?', 'Okay, lass uns die Schritte noch einmal ganz genau durchgehen, damit es klar wird. Wir nehmen die Gleichung (x + 3 = 7) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 3 gleich 7 ist. Das bedeutet, wenn wir 3 zu (x) hinzufügen, erhalten wir 7. Wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 3 = 7). - Jetzt ziehst du 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: (x +']
+2026-04-08 14:27:23,938 INFO Chatbot response generated: Ich verstehe, dass du mehr Klarheit brauchst. Lass uns noch einmal ganz einfach und klar darüber sprechen, wie man eine Gleichung löst. Ich werde es Schritt für Schritt erklären. Nehmen wir die Gleichung (x + 5 = 12) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 5 gleich 12 ist. Das bedeutet, wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 5 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 5 = 12). - Ziehe 5 von beiden Seiten ab. Das sieht so aus: - Auf der
+2026-04-08 14:31:29,743 INFO OpenRouter key loaded: True
+2026-04-08 14:31:54,020 INFO OpenRouter key loaded: True
+2026-04-08 14:32:09,158 INFO OpenRouter key loaded: True
+2026-04-08 14:32:11,921 INFO OpenRouter key loaded: True
+2026-04-08 14:52:17,380 INFO OpenRouter key loaded: True
+2026-04-08 15:57:48,040 INFO OpenRouter key loaded: True
+2026-04-08 15:57:48,302 DEBUG Chatbot request message=Test history=[]
+2026-04-08 15:57:48,304 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 15:57:48,310 DEBUG Chatbot request message=Test history=[]
+2026-04-08 15:57:48,311 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 854, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 127, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 15:57:48,326 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 15:57:48,411 WARNING Discord token exchange failed: timeout
+2026-04-08 15:58:18,957 INFO OpenRouter key loaded: True
+2026-04-08 15:58:19,261 DEBUG Chatbot request message=Test history=[]
+2026-04-08 15:58:19,262 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 15:58:19,269 DEBUG Chatbot request message=Test history=[]
+2026-04-08 15:58:19,271 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 860, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 15:58:19,284 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 15:58:19,336 WARNING Discord token exchange failed: timeout
+2026-04-08 16:04:52,941 INFO OpenRouter key loaded: True
+2026-04-08 16:04:53,216 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:04:53,218 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:04:53,226 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:04:53,227 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 859, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 133, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:04:53,242 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:04:53,291 WARNING Discord token exchange failed: timeout
+2026-04-08 16:11:32,139 INFO OpenRouter key loaded: True
+2026-04-08 16:11:32,455 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:11:32,456 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:11:32,462 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:11:32,464 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:11:32,479 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:11:32,526 WARNING Discord token exchange failed: timeout
+2026-04-08 16:11:40,463 INFO OpenRouter key loaded: True
+2026-04-08 16:11:41,355 INFO OpenRouter key loaded: True
+2026-04-08 16:14:57,425 INFO OpenRouter key loaded: True
+2026-04-08 16:14:57,722 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:14:57,724 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:14:57,731 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:14:57,732 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:14:57,748 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:14:57,797 WARNING Discord token exchange failed: timeout
+2026-04-08 16:16:29,832 INFO OpenRouter key loaded: True
+2026-04-08 16:16:30,142 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:16:30,144 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:16:30,154 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:16:30,158 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:16:30,176 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:16:30,238 WARNING Discord token exchange failed: timeout
+2026-04-08 16:17:42,571 INFO OpenRouter key loaded: True
+2026-04-08 16:17:42,904 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:17:42,906 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:17:42,913 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:17:42,914 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:17:42,931 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:17:42,991 WARNING Discord token exchange failed: timeout
+2026-04-08 16:19:06,551 INFO OpenRouter key loaded: True
+2026-04-08 16:19:06,842 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:19:06,844 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:19:06,851 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:19:06,853 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:19:06,868 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:19:06,918 WARNING Discord token exchange failed: timeout
+2026-04-08 16:22:48,792 INFO OpenRouter key loaded: True
+2026-04-08 16:22:49,638 INFO OpenRouter key loaded: True
+2026-04-08 16:25:10,142 INFO OpenRouter key loaded: True
+2026-04-08 16:25:10,436 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:25:10,437 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:25:10,446 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:25:10,447 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:25:10,461 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:25:10,512 WARNING Discord token exchange failed: timeout
+2026-04-08 16:31:50,378 INFO OpenRouter key loaded: True
+2026-04-08 16:31:50,673 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:31:50,675 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:31:50,682 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:31:50,683 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:31:50,699 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:31:50,748 WARNING Discord token exchange failed: timeout
+2026-04-08 16:33:56,432 INFO OpenRouter key loaded: True
+2026-04-08 16:33:56,912 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:33:56,915 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:33:56,926 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:33:56,928 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:33:56,948 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:33:57,033 WARNING Discord token exchange failed: timeout
+2026-04-08 16:34:59,872 INFO OpenRouter key loaded: True
+2026-04-08 16:35:00,194 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:35:00,195 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:35:00,215 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:35:00,219 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:35:00,257 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:35:00,383 WARNING Discord token exchange failed: timeout
+2026-04-08 16:36:37,701 INFO OpenRouter key loaded: True
+2026-04-08 16:36:38,025 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:36:38,027 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:36:38,036 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:36:38,038 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:36:38,054 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:36:38,115 WARNING Discord token exchange failed: timeout
+2026-04-08 16:37:59,176 INFO OpenRouter key loaded: True
+2026-04-08 16:37:59,618 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:37:59,620 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:37:59,627 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:37:59,629 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:37:59,643 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:37:59,696 WARNING Discord token exchange failed: timeout
+2026-04-08 16:39:32,370 INFO OpenRouter key loaded: True
+2026-04-08 16:39:32,667 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:39:32,668 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:39:32,676 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:39:32,677 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:39:32,692 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:39:32,747 WARNING Discord token exchange failed: timeout
+2026-04-08 16:45:16,187 INFO OpenRouter key loaded: True
+2026-04-08 16:45:16,480 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:45:16,481 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:45:16,490 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:45:16,491 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:45:16,509 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:45:16,558 WARNING Discord token exchange failed: timeout
+2026-04-08 16:45:55,598 INFO OpenRouter key loaded: True
+2026-04-08 16:45:55,904 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:45:55,906 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:45:55,912 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:45:55,914 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:45:55,927 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:45:55,978 WARNING Discord token exchange failed: timeout
+2026-04-08 16:46:34,023 INFO OpenRouter key loaded: True
+2026-04-08 16:46:34,327 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:46:34,329 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:46:34,338 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:46:34,339 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:46:34,354 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:46:34,410 WARNING Discord token exchange failed: timeout
+2026-04-08 16:47:17,042 INFO OpenRouter key loaded: True
+2026-04-08 16:47:17,362 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:47:17,364 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:47:17,372 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:47:17,374 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:47:17,391 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:47:17,447 WARNING Discord token exchange failed: timeout
+2026-04-08 16:47:38,442 INFO OpenRouter key loaded: True
+2026-04-08 16:47:38,742 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:47:38,744 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:47:38,751 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:47:38,753 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:47:38,766 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:47:38,818 WARNING Discord token exchange failed: timeout
+2026-04-08 16:50:49,571 INFO OpenRouter key loaded: True
+2026-04-08 16:50:49,889 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:50:49,890 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:50:49,898 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:50:49,900 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:50:49,915 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:50:49,974 WARNING Discord token exchange failed: timeout
+2026-04-08 16:52:25,509 INFO OpenRouter key loaded: True
+2026-04-08 16:52:25,824 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:52:25,825 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:52:25,836 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:52:25,837 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:52:25,853 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:52:25,908 WARNING Discord token exchange failed: timeout
+2026-04-08 16:54:16,379 INFO OpenRouter key loaded: True
+2026-04-08 16:54:16,760 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:54:16,762 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 16:54:16,776 DEBUG Chatbot request message=Test history=[]
+2026-04-08 16:54:16,779 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 16:54:16,803 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 16:54:16,872 WARNING Discord token exchange failed: timeout
+2026-04-08 17:01:50,242 INFO OpenRouter key loaded: True
+2026-04-08 17:01:50,567 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:01:50,569 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 17:01:50,578 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:01:50,579 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 17:01:50,596 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 17:01:50,653 WARNING Discord token exchange failed: timeout
+2026-04-08 17:01:56,908 INFO OpenRouter key loaded: True
+2026-04-08 17:02:01,186 INFO OpenRouter key loaded: True
+2026-04-08 17:02:01,507 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:02:01,509 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 17:02:01,517 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:02:01,519 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 17:02:01,535 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 17:02:01,595 WARNING Discord token exchange failed: timeout
+2026-04-08 17:03:16,836 INFO OpenRouter key loaded: True
+2026-04-08 17:03:17,294 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:03:17,296 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 17:03:17,314 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:03:17,316 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 17:03:17,400 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 17:03:17,627 WARNING Discord token exchange failed: timeout
+2026-04-08 17:04:03,694 INFO OpenRouter key loaded: True
+2026-04-08 17:04:03,986 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:04:03,988 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-08 17:04:03,997 DEBUG Chatbot request message=Test history=[]
+2026-04-08 17:04:03,998 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 875, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-08 17:04:04,012 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-08 17:04:04,065 WARNING Discord token exchange failed: timeout
+2026-04-08 17:09:54,735 INFO OpenRouter key loaded: True
+2026-04-08 17:11:19,717 INFO OpenRouter key loaded: True
+2026-04-08 17:13:00,785 INFO OpenRouter key loaded: True
+2026-04-08 17:13:44,256 INFO OpenRouter key loaded: True
+2026-04-08 17:15:12,451 INFO OpenRouter key loaded: True
+2026-04-08 20:27:28,147 DEBUG Chatbot request message=wie rechne ich mal history=['wie?', 'Ich verstehe, dass du mehr Informationen brauchst! Lass uns noch einmal Schritt für Schritt durchgehen, wie man eine Gleichung löst. Ich werde es ganz einfach erklären. Nehmen wir die Gleichung \\(x + 3 = 7\\) als Beispiel. 1. Verstehe die Gleichung: Hier steht, dass \\(x\\) plus 3 gleich 7 ist. Wir wollen herausfinden, was \\(x\\) ist. 2. Isoliere die Variable: Das bedeutet, dass wir \\(x\\) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: \\(x + 3 = 7\\) - Ziehe 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: \\(x', 'wie?', 'Okay, lass uns die Schritte noch einmal ganz genau durchgehen, damit es klar wird. Wir nehmen die Gleichung (x + 3 = 7) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 3 gleich 7 ist. Das bedeutet, wenn wir 3 zu (x) hinzufügen, erhalten wir 7. Wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 3 = 7). - Jetzt ziehst du 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: (x +', 'wie?', 'Ich verstehe, dass du mehr Klarheit brauchst. Lass uns noch einmal ganz einfach und klar darüber sprechen, wie man eine Gleichung löst. Ich werde es Schritt für Schritt erklären. Nehmen wir die Gleichung (x + 5 = 12) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 5 gleich 12 ist. Das bedeutet, wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 5 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 5 = 12). - Ziehe 5 von beiden Seiten ab. Das sieht so aus: - Auf der']
+2026-04-08 20:27:32,335 INFO Chatbot response generated: Das Rechnen mit der Multiplikation ist ganz einfach! Lass uns gemeinsam die Schritte durchgehen. 1. Was ist Multiplikation? Multiplikation ist eine Art, Zahlen zusammenzuzählen, aber auf eine schnellere Weise. Wenn du zum Beispiel 3 mal 4 rechnest, bedeutet das, dass du 3 viermal addierst: 3 + 3 + 3 + 3. Das ergibt 12. 2. Multiplikation mit einem Beispiel: Nehmen wir die Rechnung 2 mal 5. Das bedeutet, dass du 2 fünfmal addierst: 2 + 2 + 2 + 2 + 2 = 10. Also ist 2 mal 5 gleich 10. 3. Multiplikation mit einem Malzeichen: Manchmal siehst du ein „×“ oder ein „*“ zwischen den Zahlen. Das bedeutet, dass du die Zahlen multiplizieren sollst.
+2026-04-08 20:38:16,243 INFO OpenRouter key loaded: True
+2026-04-08 20:38:47,954 DEBUG Chatbot request message=was ist die Eulersche Zahl history=['wie?', 'Okay, lass uns die Schritte noch einmal ganz genau durchgehen, damit es klar wird. Wir nehmen die Gleichung (x + 3 = 7) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 3 gleich 7 ist. Das bedeutet, wenn wir 3 zu (x) hinzufügen, erhalten wir 7. Wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 3 von beiden Seiten abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 3 = 7). - Jetzt ziehst du 3 von beiden Seiten ab. Das sieht so aus: - Auf der linken Seite: (x +', 'wie?', 'Ich verstehe, dass du mehr Klarheit brauchst. Lass uns noch einmal ganz einfach und klar darüber sprechen, wie man eine Gleichung löst. Ich werde es Schritt für Schritt erklären. Nehmen wir die Gleichung (x + 5 = 12) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 5 gleich 12 ist. Das bedeutet, wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 5 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 5 = 12). - Ziehe 5 von beiden Seiten ab. Das sieht so aus: - Auf der', 'wie rechne ich mal', 'Das Rechnen mit der Multiplikation ist ganz einfach! Lass uns gemeinsam die Schritte durchgehen. 1. Was ist Multiplikation? Multiplikation ist eine Art, Zahlen zusammenzuzählen, aber auf eine schnellere Weise. Wenn du zum Beispiel 3 mal 4 rechnest, bedeutet das, dass du 3 viermal addierst: 3 + 3 + 3 + 3. Das ergibt 12. 2. Multiplikation mit einem Beispiel: Nehmen wir die Rechnung 2 mal 5. Das bedeutet, dass du 2 fünfmal addierst: 2 + 2 + 2 + 2 + 2 = 10. Also ist 2 mal 5 gleich 10. 3. Multiplikation mit einem Malzeichen: Manchmal siehst du ein „×“ oder ein „*“ zwischen den Zahlen. Das bedeutet, dass du die Zahlen multiplizieren sollst.']
+2026-04-08 20:38:52,233 INFO Chatbot response generated: Die Eulersche Zahl ist eine ganz besondere Zahl in der Mathematik. Sie wird oft mit dem Buchstaben "e" bezeichnet und hat einen Wert von ungefähr 2,718. Lass uns ein paar wichtige Punkte dazu durchgehen: 1. Was ist "e"? - "e" ist eine irrationale Zahl, das bedeutet, sie kann nicht als einfacher Bruch dargestellt werden. Ihre Dezimalstellen gehen ewig weiter, ohne sich zu wiederholen. 2. Wo wird "e" verwendet? - "e" kommt oft in der Mathematik vor, besonders in der Analysis und bei exponentiellen Wachstums- und Zerfallsprozessen. Zum Beispiel, wenn etwas wächst, wie Bäume oder Bakterien, kann man oft die Eulersche Zahl verwenden, um das Wachstum zu beschreiben. 3. Ein Beispiel für "e": - Wenn du Geld auf einem Bankkonto hast, das Zinsen bringt, kann die Eulersche Zahl helfen, zu
+2026-04-08 20:42:07,472 DEBUG Chatbot request message=hä history=['wie?', 'Ich verstehe, dass du mehr Klarheit brauchst. Lass uns noch einmal ganz einfach und klar darüber sprechen, wie man eine Gleichung löst. Ich werde es Schritt für Schritt erklären. Nehmen wir die Gleichung (x + 5 = 12) als Beispiel. 1. Verstehe die Gleichung: Diese Gleichung sagt, dass (x) plus 5 gleich 12 ist. Das bedeutet, wir wollen herausfinden, was (x) ist. 2. Isoliere die Variable: Das bedeutet, dass wir (x) alleine auf einer Seite der Gleichung haben wollen. Um das zu tun, müssen wir 5 von beiden Seiten der Gleichung abziehen. 3. Schritte aufschreiben: - Beginne mit der Gleichung: (x + 5 = 12). - Ziehe 5 von beiden Seiten ab. Das sieht so aus: - Auf der', 'wie rechne ich mal', 'Das Rechnen mit der Multiplikation ist ganz einfach! Lass uns gemeinsam die Schritte durchgehen. 1. Was ist Multiplikation? Multiplikation ist eine Art, Zahlen zusammenzuzählen, aber auf eine schnellere Weise. Wenn du zum Beispiel 3 mal 4 rechnest, bedeutet das, dass du 3 viermal addierst: 3 + 3 + 3 + 3. Das ergibt 12. 2. Multiplikation mit einem Beispiel: Nehmen wir die Rechnung 2 mal 5. Das bedeutet, dass du 2 fünfmal addierst: 2 + 2 + 2 + 2 + 2 = 10. Also ist 2 mal 5 gleich 10. 3. Multiplikation mit einem Malzeichen: Manchmal siehst du ein „×“ oder ein „*“ zwischen den Zahlen. Das bedeutet, dass du die Zahlen multiplizieren sollst.', 'was ist die Eulersche Zahl', 'Die Eulersche Zahl ist eine ganz besondere Zahl in der Mathematik. Sie wird oft mit dem Buchstaben "e" bezeichnet und hat einen Wert von ungefähr 2,718. Lass uns ein paar wichtige Punkte dazu durchgehen: 1. Was ist "e"? - "e" ist eine irrationale Zahl, das bedeutet, sie kann nicht als einfacher Bruch dargestellt werden. Ihre Dezimalstellen gehen ewig weiter, ohne sich zu wiederholen. 2. Wo wird "e" verwendet? - "e" kommt oft in der Mathematik vor, besonders in der Analysis und bei exponentiellen Wachstums- und Zerfallsprozessen. Zum Beispiel, wenn etwas wächst, wie Bäume oder Bakterien, kann man oft die Eulersche Zahl verwenden, um das Wachstum zu beschreiben. 3. Ein Beispiel für "e": - Wenn du Geld auf einem Bankkonto hast, das Zinsen bringt, kann die Eulersche Zahl helfen, zu']
+2026-04-08 20:42:09,653 INFO Chatbot response generated: Kein Problem, lass es uns einfacher machen! Die Eulersche Zahl ist einfach eine spezielle Zahl, die in der Mathematik wichtig ist. Hier sind ein paar einfache Punkte: 1. Die Eulersche Zahl wird mit "e" abgekürzt. 2. Ihr Wert ist ungefähr 2,718. 3. Sie wird oft verwendet, wenn wir über Dinge sprechen, die schnell wachsen oder schrumpfen, wie Geld auf einem Konto oder Bakterien. Wenn du mehr darüber wissen möchtest, sag einfach Bescheid! Ich helfe dir gerne weiter!
+2026-04-08 20:42:35,732 DEBUG Chatbot request message=Bakterien? history=['wie rechne ich mal', 'Das Rechnen mit der Multiplikation ist ganz einfach! Lass uns gemeinsam die Schritte durchgehen. 1. Was ist Multiplikation? Multiplikation ist eine Art, Zahlen zusammenzuzählen, aber auf eine schnellere Weise. Wenn du zum Beispiel 3 mal 4 rechnest, bedeutet das, dass du 3 viermal addierst: 3 + 3 + 3 + 3. Das ergibt 12. 2. Multiplikation mit einem Beispiel: Nehmen wir die Rechnung 2 mal 5. Das bedeutet, dass du 2 fünfmal addierst: 2 + 2 + 2 + 2 + 2 = 10. Also ist 2 mal 5 gleich 10. 3. Multiplikation mit einem Malzeichen: Manchmal siehst du ein „×“ oder ein „*“ zwischen den Zahlen. Das bedeutet, dass du die Zahlen multiplizieren sollst.', 'was ist die Eulersche Zahl', 'Die Eulersche Zahl ist eine ganz besondere Zahl in der Mathematik. Sie wird oft mit dem Buchstaben "e" bezeichnet und hat einen Wert von ungefähr 2,718. Lass uns ein paar wichtige Punkte dazu durchgehen: 1. Was ist "e"? - "e" ist eine irrationale Zahl, das bedeutet, sie kann nicht als einfacher Bruch dargestellt werden. Ihre Dezimalstellen gehen ewig weiter, ohne sich zu wiederholen. 2. Wo wird "e" verwendet? - "e" kommt oft in der Mathematik vor, besonders in der Analysis und bei exponentiellen Wachstums- und Zerfallsprozessen. Zum Beispiel, wenn etwas wächst, wie Bäume oder Bakterien, kann man oft die Eulersche Zahl verwenden, um das Wachstum zu beschreiben. 3. Ein Beispiel für "e": - Wenn du Geld auf einem Bankkonto hast, das Zinsen bringt, kann die Eulersche Zahl helfen, zu', 'hä', 'Kein Problem, lass es uns einfacher machen! Die Eulersche Zahl ist einfach eine spezielle Zahl, die in der Mathematik wichtig ist. Hier sind ein paar einfache Punkte: 1. Die Eulersche Zahl wird mit "e" abgekürzt. 2. Ihr Wert ist ungefähr 2,718. 3. Sie wird oft verwendet, wenn wir über Dinge sprechen, die schnell wachsen oder schrumpfen, wie Geld auf einem Konto oder Bakterien. Wenn du mehr darüber wissen möchtest, sag einfach Bescheid! Ich helfe dir gerne weiter!']
+2026-04-08 20:42:39,451 INFO Chatbot response generated: Ja, genau! Lass uns über Bakterien reden. Bakterien sind winzige Lebewesen, die wir mit unseren Augen nicht sehen können. Hier sind ein paar wichtige Dinge über Bakterien: 1. Was sind Bakterien? - Bakterien sind sehr kleine Organismen, die überall um uns herum leben. Sie sind so klein, dass man sie nur mit einem Mikroskop sehen kann. 2. Wo findet man Bakterien? - Bakterien sind fast überall! Sie leben in der Luft, im Wasser, im Boden und sogar in unserem Körper. Einige Bakterien sind gut für uns, andere können uns krank machen. 3. Gute und schlechte Bakterien: - Manche Bakterien helfen uns, zum Beispiel in unserem Bauch. Sie helfen bei der Verdauung von Essen. Andere Bakterien können Krankheiten verursachen, wie zum Beispiel eine Erkältung. 4. **Wachstum von Bakterien
+2026-04-08 20:43:37,204 DEBUG Chatbot request message=was soll ich in Mathe als nächstes üben history=['was ist die Eulersche Zahl', 'Die Eulersche Zahl ist eine ganz besondere Zahl in der Mathematik. Sie wird oft mit dem Buchstaben "e" bezeichnet und hat einen Wert von ungefähr 2,718. Lass uns ein paar wichtige Punkte dazu durchgehen: 1. Was ist "e"? - "e" ist eine irrationale Zahl, das bedeutet, sie kann nicht als einfacher Bruch dargestellt werden. Ihre Dezimalstellen gehen ewig weiter, ohne sich zu wiederholen. 2. Wo wird "e" verwendet? - "e" kommt oft in der Mathematik vor, besonders in der Analysis und bei exponentiellen Wachstums- und Zerfallsprozessen. Zum Beispiel, wenn etwas wächst, wie Bäume oder Bakterien, kann man oft die Eulersche Zahl verwenden, um das Wachstum zu beschreiben. 3. Ein Beispiel für "e": - Wenn du Geld auf einem Bankkonto hast, das Zinsen bringt, kann die Eulersche Zahl helfen, zu', 'hä', 'Kein Problem, lass es uns einfacher machen! Die Eulersche Zahl ist einfach eine spezielle Zahl, die in der Mathematik wichtig ist. Hier sind ein paar einfache Punkte: 1. Die Eulersche Zahl wird mit "e" abgekürzt. 2. Ihr Wert ist ungefähr 2,718. 3. Sie wird oft verwendet, wenn wir über Dinge sprechen, die schnell wachsen oder schrumpfen, wie Geld auf einem Konto oder Bakterien. Wenn du mehr darüber wissen möchtest, sag einfach Bescheid! Ich helfe dir gerne weiter!', 'Bakterien?', 'Ja, genau! Lass uns über Bakterien reden. Bakterien sind winzige Lebewesen, die wir mit unseren Augen nicht sehen können. Hier sind ein paar wichtige Dinge über Bakterien: 1. Was sind Bakterien? - Bakterien sind sehr kleine Organismen, die überall um uns herum leben. Sie sind so klein, dass man sie nur mit einem Mikroskop sehen kann. 2. Wo findet man Bakterien? - Bakterien sind fast überall! Sie leben in der Luft, im Wasser, im Boden und sogar in unserem Körper. Einige Bakterien sind gut für uns, andere können uns krank machen. 3. Gute und schlechte Bakterien: - Manche Bakterien helfen uns, zum Beispiel in unserem Bauch. Sie helfen bei der Verdauung von Essen. Andere Bakterien können Krankheiten verursachen, wie zum Beispiel eine Erkältung. 4. **Wachstum von Bakterien']
+2026-04-08 20:43:42,513 INFO Chatbot response generated: Das ist super, dass du Mathe üben möchtest! Hier sind ein paar coole Ideen, was du als Nächstes machen kannst: 1. Grundrechenarten: Übe Addition, Subtraktion, Multiplikation und Division. Du kannst das mit kleinen Zahlen anfangen und dann zu größeren übergehen. 2. Brüche: Lerne, wie man Brüche addiert, subtrahiert, multipliziert und dividiert. Das kann ganz spannend sein! Du kannst auch versuchen, Brüche in Dezimalzahlen umzuwandeln. 3. Geometrie: Schau dir Formen an, wie Dreiecke, Quadrate und Kreise. Du kannst die Flächen und Umfänge berechnen. Das macht Spaß, besonders wenn du mit Zeichnungen arbeitest! 4. Zahlenmuster: Übe das Erkennen von Mustern. Zum Beispiel, was kommt als Nächstes in der Reihe: 2, 4,
+2026-04-09 21:39:42,891 INFO OpenRouter key loaded: True
+2026-04-09 21:39:43,823 INFO OpenRouter key loaded: True
+2026-04-09 21:39:51,649 DEBUG Chatbot request message=was soll ich in Mathe als nächstes üben history=['hä', 'Kein Problem, lass es uns einfacher machen! Die Eulersche Zahl ist einfach eine spezielle Zahl, die in der Mathematik wichtig ist. Hier sind ein paar einfache Punkte: 1. Die Eulersche Zahl wird mit "e" abgekürzt. 2. Ihr Wert ist ungefähr 2,718. 3. Sie wird oft verwendet, wenn wir über Dinge sprechen, die schnell wachsen oder schrumpfen, wie Geld auf einem Konto oder Bakterien. Wenn du mehr darüber wissen möchtest, sag einfach Bescheid! Ich helfe dir gerne weiter!', 'Bakterien?', 'Ja, genau! Lass uns über Bakterien reden. Bakterien sind winzige Lebewesen, die wir mit unseren Augen nicht sehen können. Hier sind ein paar wichtige Dinge über Bakterien: 1. Was sind Bakterien? - Bakterien sind sehr kleine Organismen, die überall um uns herum leben. Sie sind so klein, dass man sie nur mit einem Mikroskop sehen kann. 2. Wo findet man Bakterien? - Bakterien sind fast überall! Sie leben in der Luft, im Wasser, im Boden und sogar in unserem Körper. Einige Bakterien sind gut für uns, andere können uns krank machen. 3. Gute und schlechte Bakterien: - Manche Bakterien helfen uns, zum Beispiel in unserem Bauch. Sie helfen bei der Verdauung von Essen. Andere Bakterien können Krankheiten verursachen, wie zum Beispiel eine Erkältung. 4. **Wachstum von Bakterien', 'was soll ich in Mathe als nächstes üben', 'Das ist super, dass du Mathe üben möchtest! Hier sind ein paar coole Ideen, was du als Nächstes machen kannst: 1. Grundrechenarten: Übe Addition, Subtraktion, Multiplikation und Division. Du kannst das mit kleinen Zahlen anfangen und dann zu größeren übergehen. 2. Brüche: Lerne, wie man Brüche addiert, subtrahiert, multipliziert und dividiert. Das kann ganz spannend sein! Du kannst auch versuchen, Brüche in Dezimalzahlen umzuwandeln. 3. Geometrie: Schau dir Formen an, wie Dreiecke, Quadrate und Kreise. Du kannst die Flächen und Umfänge berechnen. Das macht Spaß, besonders wenn du mit Zeichnungen arbeitest! 4. Zahlenmuster: Übe das Erkennen von Mustern. Zum Beispiel, was kommt als Nächstes in der Reihe: 2, 4,']
+2026-04-09 21:39:55,767 INFO Chatbot response generated: Klar, lass uns das zusammen herausfinden! Hier sind ein paar coole Dinge, die du in Mathe als Nächstes üben kannst: 1. Grundrechenarten: Übe Addition, Subtraktion, Multiplikation und Division. Du kannst mit kleinen Zahlen anfangen und dann größere Zahlen ausprobieren. 2. Brüche: Lerne, wie man Brüche addiert und subtrahiert. Du kannst auch versuchen, Brüche in Dezimalzahlen umzuwandeln. Das macht Spaß und ist wichtig! 3. Geometrie: Schau dir verschiedene Formen an, wie Dreiecke, Quadrate und Kreise. Übe, wie man die Flächen und Umfänge dieser Formen berechnet. 4. Zahlenmuster: Übe das Erkennen von Mustern. Zum Beispiel, was kommt als Nächstes in der Reihe: 2, 4, 6, ...? (Die Antwort ist
+2026-04-10 15:06:32,097 INFO OpenRouter key loaded: True
+2026-04-10 15:06:33,094 INFO OpenRouter key loaded: True
+2026-04-10 15:54:48,011 INFO OpenRouter key loaded: True
+2026-04-10 15:57:00,753 INFO OpenRouter key loaded: True
+2026-04-10 15:58:42,390 INFO OpenRouter key loaded: True
+2026-04-10 15:58:57,118 INFO OpenRouter key loaded: True
+2026-04-10 15:59:06,017 INFO OpenRouter key loaded: True
+2026-04-10 15:59:14,871 INFO OpenRouter key loaded: True
+2026-04-10 15:59:25,881 INFO OpenRouter key loaded: True
+2026-04-10 15:59:28,186 INFO OpenRouter key loaded: True
+2026-04-10 15:59:34,786 INFO OpenRouter key loaded: True
+2026-04-10 15:59:37,123 INFO OpenRouter key loaded: True
+2026-04-10 15:59:50,219 INFO OpenRouter key loaded: True
+2026-04-10 16:00:09,878 INFO OpenRouter key loaded: True
+2026-04-10 16:00:37,280 INFO OpenRouter key loaded: True
+2026-04-10 16:00:43,400 INFO OpenRouter key loaded: True
+2026-04-10 16:00:43,743 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:00:43,745 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-10 16:00:43,755 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:00:43,756 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1135, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-10 16:00:43,774 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-10 16:00:43,827 WARNING Discord token exchange failed: timeout
+2026-04-10 16:00:49,420 INFO OpenRouter key loaded: True
+2026-04-10 16:00:51,005 INFO OpenRouter key loaded: True
+2026-04-10 16:00:51,290 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:00:51,291 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-10 16:00:51,297 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:00:51,299 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1135, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-10 16:00:51,312 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-10 16:00:51,357 WARNING Discord token exchange failed: timeout
+2026-04-10 16:05:05,217 INFO OpenRouter key loaded: True
+2026-04-10 16:05:06,463 INFO OpenRouter key loaded: True
+2026-04-10 16:05:09,819 INFO OpenRouter key loaded: True
+2026-04-10 16:05:18,038 INFO OpenRouter key loaded: True
+2026-04-10 16:05:21,633 INFO OpenRouter key loaded: True
+2026-04-10 16:05:25,410 INFO OpenRouter key loaded: True
+2026-04-10 16:05:25,709 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:05:25,710 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-10 16:05:25,718 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:05:25,719 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1135, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-10 16:05:25,738 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-10 16:05:25,797 WARNING Discord token exchange failed: timeout
+2026-04-10 16:09:23,129 INFO OpenRouter key loaded: True
+2026-04-10 16:09:31,827 INFO OpenRouter key loaded: True
+2026-04-10 16:09:32,176 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:09:32,178 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-10 16:09:32,196 DEBUG Chatbot request message=Test history=[]
+2026-04-10 16:09:32,199 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1141, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-10 16:09:32,226 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-10 16:09:32,310 WARNING Discord token exchange failed: timeout
+2026-04-10 16:13:11,180 DEBUG Request feedback summary topic=Mathematik subtopic=Arithmetik mode=leicht answers=10
+2026-04-10 16:13:13,074 DEBUG Request feedback summary topic=Mathematik subtopic=Arithmetik mode=leicht answers=10
+2026-04-10 16:13:16,296 INFO Generated feedback summary for Mathematik/Arithmetik/leicht: {'analysis': 'Du hast bei den ersten beiden Fragen richtig geantwortet, aber bei den folgenden Fragen gab es viele Fehler, insbesondere bei den Multiplikationen und Divisionen. Es scheint, als hättest du Schwierigkeiten mit den Grundrechenarten, insbesondere mit den Zahlen und dem Rechnen im Kopf.', 'recommendation': 'Übe die Grundrechenarten (Addition, Subtraktion, Multiplikation, Division) mit einfachen Zahlen. Versuche, die Aufgaben im Kopf zu lösen, und schreibe die Ergebnisse auf. Es kann auch hilfreich sein, mit einem Freund oder einem Familienmitglied zu üben, um mehr Sicherheit zu gewinnen.', 'topic': 'Grundrechenarten (Addition, Subtraktion, Multiplikation, Division)', 'practice': 'Nimm dir jeden Tag 10 Minuten Zeit, um 10 einfache Rechenaufgaben zu lösen. Du kannst auch Online-Übungsseiten oder Mathe-Apps nutzen, die dir helfen, deine Fähigkeiten zu verbessern.'}
+2026-04-10 16:13:23,140 WARNING OpenRouter feedback missing fields ['analysis', 'recommendation', 'practice'] for Mathematik/Arithmetik/leicht
+2026-04-10 16:13:23,141 INFO Fallback feedback triggered due to incorrect answers for Mathematik/Arithmetik (count=8)
+2026-04-11 14:32:26,471 INFO OpenRouter key loaded: True
+2026-04-11 14:32:28,862 INFO OpenRouter key loaded: True
+2026-04-11 14:33:36,191 DEBUG Request feedback summary topic=Mathematik subtopic=Arithmetik mode=leicht answers=10
+2026-04-11 14:33:39,013 DEBUG Request feedback summary topic=Mathematik subtopic=Arithmetik mode=leicht answers=10
+2026-04-11 14:33:40,263 INFO Generated feedback summary for Mathematik/Arithmetik/leicht: {'analysis': 'Es scheint, dass es Schwierigkeiten bei den Grundrechenarten gibt. Die Antworten zeigen, dass die Konzepte von Addition, Subtraktion, Multiplikation und Division noch nicht vollständig verstanden sind.', 'recommendation': 'Übe die Grundrechenarten mit einfachen Aufgaben. Beginne mit Addition und Subtraktion, bevor du zu Multiplikation und Division übergehst. Verwende dabei visuelle Hilfsmittel wie Zählhilfen oder Zeichnungen, um die Konzepte besser zu verstehen.', 'topic': 'Grundrechenarten (Addition, Subtraktion, Multiplikation, Division)', 'practice': 'Erstelle ein Übungsheft mit 10 einfachen Aufgaben für jede Rechenart. Zum Beispiel: 1. 3 + 4 = ? 2. 7 - 2 = ? 3. 2 * 5 = ? 4. 12 / 4 = ? Löse diese Aufgaben und überprüfe deine Antworten.'}
+2026-04-11 14:33:41,625 INFO Generated feedback summary for Mathematik/Arithmetik/leicht: {'analysis': 'Es scheint, dass es Schwierigkeiten mit grundlegenden arithmetischen Operationen gibt, insbesondere beim Addieren, Subtrahieren, Multiplizieren und Dividieren. Die Antworten zeigen, dass die Konzepte nicht klar verstanden werden.', 'recommendation': 'Ich empfehle, die Grundlagen der Arithmetik zu wiederholen. Beginne mit einfachen Aufgaben und arbeite dich zu schwierigeren vor. Nutze auch visuelle Hilfsmittel wie Zahlenlinien oder Rechenhilfen, um ein besseres Verständnis zu entwickeln.', 'topic': 'Grundlegende Arithmetik (Addition, Subtraktion, Multiplikation, Division)', 'practice': "Übe mit Arbeitsblättern, die einfache Rechenaufgaben enthalten. Websites wie 'Khan Academy' oder 'Mathe-Online' bieten interaktive Übungen an. Setze dir ein Ziel, täglich eine bestimmte Anzahl an Aufgaben zu lösen."}
+2026-04-11 14:34:01,318 DEBUG Chatbot request message=was muss ich üben? history=[]
+2026-04-11 14:34:03,364 INFO Chatbot response generated: Das kommt ganz darauf an, was du lernen oder besser machen möchtest! Hier sind ein paar Ideen, die dir helfen können: 1. Mathe: Wenn du Mathe üben willst, kannst du mit einfachen Addition und Subtraktion anfangen. Zähle Dinge in deiner Umgebung, wie Äpfel oder Spielzeuge. Das macht Spaß! 2. Lesen: Lies jeden Tag ein kurzes Buch oder eine Geschichte. Frag dich danach, was dir gefallen hat. Das hilft dir, besser zu verstehen! 3. Schreiben: Versuch, jeden Tag ein paar Sätze zu schreiben. Das kann ein Tagebuch sein oder eine kleine Geschichte. Schreib einfach drauflos! 4. Sport: Wenn du sportlich werden willst, probier verschiedene Sachen aus! Laufen, Radfahren oder Ballspiele sind super. Bewegung macht Spaß! 5. Kreativität: Malen oder Basteln ist auch eine tolle Übung! Lass deiner Fantasie freien Lauf
+2026-04-11 14:38:44,576 INFO OpenRouter key loaded: True
+2026-04-11 14:39:14,401 INFO OpenRouter key loaded: True
+2026-04-11 14:39:49,691 INFO OpenRouter key loaded: True
+2026-04-11 14:39:50,043 DEBUG Chatbot request message=Test history=[]
+2026-04-11 14:39:50,045 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-11 14:39:50,055 DEBUG Chatbot request message=Test history=[]
+2026-04-11 14:39:50,057 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1157, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-11 14:39:50,077 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-11 14:39:50,139 WARNING Discord token exchange failed: timeout
+2026-04-11 15:19:12,733 DEBUG Request feedback summary topic=Mathematik subtopic=Arithmetik mode=leicht answers=10
+2026-04-11 15:19:14,541 INFO Generated feedback summary for Mathematik/Arithmetik/leicht: {'analysis': 'Du hast einige Fragen richtig beantwortet, aber bei vielen hast du falsche Antworten gegeben. Besonders bei den Subtraktionen und Multiplikationen scheinst du Schwierigkeiten zu haben. Es ist wichtig, die Grundlagen der Arithmetik zu festigen, um sicherer zu werden.', 'recommendation': 'Übe die Grundrechenarten (Addition, Subtraktion, Multiplikation, Division) regelmäßig. Versuche, die Aufgaben zunächst schriftlich zu lösen und überprüfe deine Antworten. Nutze auch Lernspiele oder Apps, um das Üben abwechslungsreicher zu gestalten.', 'topic': 'Grundrechenarten (Addition, Subtraktion, Multiplikation, Division)', 'practice': 'Löse folgende Aufgaben: 7 + 5, 15 - 6, 4 x 3, 20 ÷ 5. Schreibe deine Antworten auf und überprüfe sie anschließend.'}
+2026-04-11 15:55:39,743 INFO OpenRouter key loaded: True
+2026-04-11 15:55:46,328 INFO OpenRouter key loaded: True
+2026-04-11 15:55:48,543 INFO OpenRouter key loaded: True
+2026-04-11 15:56:34,533 INFO OpenRouter key loaded: True
+2026-04-11 15:56:47,545 INFO OpenRouter key loaded: True
+2026-04-11 15:56:47,842 DEBUG Chatbot request message=Test history=[]
+2026-04-11 15:56:47,844 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-11 15:56:47,852 DEBUG Chatbot request message=Test history=[]
+2026-04-11 15:56:47,854 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1175, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-11 15:56:47,870 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-11 15:56:47,931 WARNING Discord token exchange failed: timeout
+2026-04-11 16:07:54,260 INFO OpenRouter key loaded: True
+2026-04-11 16:07:54,909 DEBUG Chatbot request message=Test history=[]
+2026-04-11 16:07:54,910 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-11 16:07:54,918 DEBUG Chatbot request message=Test history=[]
+2026-04-11 16:07:54,920 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1175, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-11 16:07:54,961 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-11 16:07:55,030 WARNING Discord token exchange failed: timeout
+2026-04-11 16:08:18,303 INFO OpenRouter key loaded: True
+2026-04-11 16:08:18,596 DEBUG Chatbot request message=Test history=[]
+2026-04-11 16:08:18,598 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-11 16:08:18,607 DEBUG Chatbot request message=Test history=[]
+2026-04-11 16:08:18,609 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1175, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-11 16:08:18,623 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-11 16:08:18,680 WARNING Discord token exchange failed: timeout
+2026-04-11 16:15:27,786 INFO OpenRouter key loaded: True
+2026-04-11 16:15:28,972 INFO OpenRouter key loaded: True
+2026-04-11 16:15:29,241 DEBUG Chatbot request message=Test history=[]
+2026-04-11 16:15:29,243 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-11 16:15:29,249 DEBUG Chatbot request message=Test history=[]
+2026-04-11 16:15:29,250 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1175, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-11 16:15:29,264 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-11 16:15:29,310 WARNING Discord token exchange failed: timeout
+2026-04-13 17:10:34,956 INFO OpenRouter key loaded: True
+2026-04-13 17:10:36,130 INFO OpenRouter key loaded: True
+2026-04-13 17:25:22,233 INFO OpenRouter key loaded: True
+2026-04-13 17:25:30,396 INFO OpenRouter key loaded: True
+2026-04-13 17:25:41,784 INFO OpenRouter key loaded: True
+2026-04-13 17:25:44,352 INFO OpenRouter key loaded: True
+2026-04-13 17:25:51,303 INFO OpenRouter key loaded: True
+2026-04-13 17:25:57,063 INFO OpenRouter key loaded: True
+2026-04-13 17:26:12,764 INFO OpenRouter key loaded: True
+2026-04-13 17:26:17,381 INFO OpenRouter key loaded: True
+2026-04-13 17:26:39,494 INFO OpenRouter key loaded: True
+2026-04-13 17:26:50,002 INFO OpenRouter key loaded: True
+2026-04-13 17:27:00,832 INFO OpenRouter key loaded: True
+2026-04-13 17:27:22,088 INFO OpenRouter key loaded: True
+2026-04-13 17:27:34,627 INFO OpenRouter key loaded: True
+2026-04-13 17:27:49,390 INFO OpenRouter key loaded: True
+2026-04-13 17:27:59,902 INFO OpenRouter key loaded: True
+2026-04-13 17:28:14,275 INFO OpenRouter key loaded: True
+2026-04-13 17:28:14,618 DEBUG Chatbot request message=Test history=[]
+2026-04-13 17:28:14,620 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 17:28:14,627 DEBUG Chatbot request message=Test history=[]
+2026-04-13 17:28:14,629 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1319, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 17:28:14,646 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 17:28:14,708 WARNING Discord token exchange failed: timeout
+2026-04-13 18:21:42,127 INFO OpenRouter key loaded: True
+2026-04-13 18:21:47,628 INFO OpenRouter key loaded: True
+2026-04-13 18:21:56,343 INFO OpenRouter key loaded: True
+2026-04-13 18:22:00,751 INFO OpenRouter key loaded: True
+2026-04-13 18:22:04,069 INFO OpenRouter key loaded: True
+2026-04-13 18:22:22,455 INFO OpenRouter key loaded: True
+2026-04-13 18:23:16,567 INFO OpenRouter key loaded: True
+2026-04-13 18:23:16,869 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:23:16,870 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 18:23:16,876 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:23:16,878 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1359, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 18:23:16,892 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 18:23:16,938 WARNING Discord token exchange failed: timeout
+2026-04-13 18:26:00,537 INFO OpenRouter key loaded: True
+2026-04-13 18:26:01,431 INFO OpenRouter key loaded: True
+2026-04-13 18:26:11,172 INFO OpenRouter key loaded: True
+2026-04-13 18:26:11,461 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:26:11,463 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 18:26:11,472 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:26:11,473 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1359, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 18:26:11,489 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 18:26:11,545 WARNING Discord token exchange failed: timeout
+2026-04-13 18:27:07,095 INFO OpenRouter key loaded: True
+2026-04-13 18:27:07,378 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:27:07,380 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 18:27:07,386 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:27:07,387 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1359, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 18:27:07,402 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 18:27:07,450 WARNING Discord token exchange failed: timeout
+2026-04-13 18:28:23,639 DEBUG Chatbot request message=ich versteh addieren nicht. Sag mir ein beispiel das ich es checke history=['was muss ich üben?', 'Das kommt ganz darauf an, was du lernen oder besser machen möchtest! Hier sind ein paar Ideen, die dir helfen können: 1. Mathe: Wenn du Mathe üben willst, kannst du mit einfachen Addition und Subtraktion anfangen. Zähle Dinge in deiner Umgebung, wie Äpfel oder Spielzeuge. Das macht Spaß! 2. Lesen: Lies jeden Tag ein kurzes Buch oder eine Geschichte. Frag dich danach, was dir gefallen hat. Das hilft dir, besser zu verstehen! 3. Schreiben: Versuch, jeden Tag ein paar Sätze zu schreiben. Das kann ein Tagebuch sein oder eine kleine Geschichte. Schreib einfach drauflos! 4. Sport: Wenn du sportlich werden willst, probier verschiedene Sachen aus! Laufen, Radfahren oder Ballspiele sind super. Bewegung macht Spaß! 5. Kreativität: Malen oder Basteln ist auch eine tolle Übung! Lass deiner Fantasie freien Lauf']
+2026-04-13 18:28:26,348 INFO Chatbot response generated: Klar, kein Problem! Lass uns das mit einem einfachen Beispiel machen. Stell dir vor, du hast 3 Äpfel. Jetzt kommt ein Freund vorbei und gibt dir 2 weitere Äpfel. Um herauszufinden, wie viele Äpfel du jetzt hast, addierst du die Äpfel: 3 Äpfel + 2 Äpfel = ? Das ist ganz einfach! Du zählst einfach die Äpfel zusammen. 1. Zähle die Äpfel: 3 Äpfel (die du schon hattest) + 2 Äpfel (die du bekommen hast).
+2. Jetzt zählst du: 1, 2, 3, 4, 5. Also hast du jetzt 5 Äpfel! Probier es mal selbst mit anderen Zahlen! Zum Beispiel: Was ist 4 + 3? Zähle die 4 und dann die 3 dazu. Viel Spaß beim Ü
+2026-04-13 18:30:59,970 INFO OpenRouter key loaded: True
+2026-04-13 18:32:10,744 INFO OpenRouter key loaded: True
+2026-04-13 18:32:15,133 INFO OpenRouter key loaded: True
+2026-04-13 18:32:17,373 INFO OpenRouter key loaded: True
+2026-04-13 18:32:20,726 INFO OpenRouter key loaded: True
+2026-04-13 18:32:32,318 INFO OpenRouter key loaded: True
+2026-04-13 18:32:32,637 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:32:32,638 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 18:32:32,645 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:32:32,646 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1375, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 18:32:32,659 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 18:32:32,709 WARNING Discord token exchange failed: timeout
+2026-04-13 18:33:51,952 INFO OpenRouter key loaded: True
+2026-04-13 18:36:47,776 INFO OpenRouter key loaded: True
+2026-04-13 18:36:52,055 INFO OpenRouter key loaded: True
+2026-04-13 18:37:17,093 INFO OpenRouter key loaded: True
+2026-04-13 18:37:18,889 INFO OpenRouter key loaded: True
+2026-04-13 18:37:40,844 INFO OpenRouter key loaded: True
+2026-04-13 18:37:44,174 INFO OpenRouter key loaded: True
+2026-04-13 18:37:54,082 INFO OpenRouter key loaded: True
+2026-04-13 18:37:54,360 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:37:54,361 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 18:37:54,368 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:37:54,369 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1375, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 18:37:54,383 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 18:37:54,429 WARNING Discord token exchange failed: timeout
+2026-04-13 18:44:12,461 INFO OpenRouter key loaded: True
+2026-04-13 18:44:15,968 INFO OpenRouter key loaded: True
+2026-04-13 18:44:22,704 INFO OpenRouter key loaded: True
+2026-04-13 18:44:27,135 INFO OpenRouter key loaded: True
+2026-04-13 18:44:28,796 INFO OpenRouter key loaded: True
+2026-04-13 18:44:31,740 INFO OpenRouter key loaded: True
+2026-04-13 18:44:32,019 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:44:32,021 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-13 18:44:32,027 DEBUG Chatbot request message=Test history=[]
+2026-04-13 18:44:32,029 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1375, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-13 18:44:32,042 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-13 18:44:32,087 WARNING Discord token exchange failed: timeout
+2026-04-14 13:49:32,353 INFO OpenRouter key loaded: True
+2026-04-14 13:49:32,642 DEBUG Chatbot request message=Test history=[]
+2026-04-14 13:49:32,643 WARNING Chatbot response returned status=401 detail=Invalid API key
+2026-04-14 13:49:32,650 DEBUG Chatbot request message=Test history=[]
+2026-04-14 13:49:32,651 ERROR Chatbot OpenRouter request failed
+Traceback (most recent call last):
+  File "/Users/aidan/codex-test-Lernplattform/app.py", line 1375, in generate_chatbot_response
+    response = requests.post(
+  File "/Users/aidan/codex-test-Lernplattform/tests/test_app.py", line 134, in fake_post
+    raise learning_app.requests.RequestException("timeout")
+requests.exceptions.RequestException: timeout
+2026-04-14 13:49:32,666 WARNING Live quiz question request failed status=401 detail=Invalid API key
+2026-04-14 13:49:32,712 WARNING Discord token exchange failed: timeout

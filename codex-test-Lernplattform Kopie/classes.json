@@ -1,0 +1,25 @@
+{
+  "667EB2": {
+    "name": "Test1",
+    "teacher": "test-L",
+    "students": [
+      "test-S",
+      "Little Child"
+    ],
+    "assignments": [
+      {
+        "id": "e846a1fa",
+        "topic": "Geschichte",
+        "subtopic": "Weltgeschichte",
+        "mode": "leicht",
+        "created": "2026-04-07 16:31",
+        "deadline": null,
+        "feedback": [],
+        "starts": {},
+        "completed": [
+          "test-S"
+        ]
+      }
+    ]
+  }
+}

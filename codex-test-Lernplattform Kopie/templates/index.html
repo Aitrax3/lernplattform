@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmelden</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="login-page">
+    <div class="sticker-strip" aria-label="Sticker-Leiste">
+        {% for icon in sticker_strip %}
+            <span class="sticker-pill">{{ icon }}</span>
+        {% endfor %}
+    </div>
+    <div class="login-shell">
+        <section class="login-hero">
+            <p class="hero-tagline">Frische Lernmomente, rote Energie</p>
+            <h1>Willkommen zurück</h1>
+            <p class="hero-subtitle">Melde dich an, um deine nächsten Quiz-Challenges zu starten.</p>
+        </section>
+        <div class="login-card">
+            <p class="muted accent-note">Sichere Verbindung, moderne KI-Unterstützung</p>
+            {% if message %}
+                <div class="notification">{{ message }}</div>
+            {% endif %}
+            <form method="post" class="auth-form">
+                <label class="visually-hidden" for="username">Benutzername</label>
+                <input id="username" type="text" name="username" placeholder="Benutzername" required>
+                <label class="visually-hidden" for="password">Passwort</label>
+                <input id="password" type="password" name="password" placeholder="Passwort" required>
+                <button class="primary-action" type="submit">Anmelden</button>
+            </form>
+            <div class="auth-secondary">
+                <a class="primary-action button-link" href="{{ url_for('discord_authorize') }}">
+                    Mit Discord anmelden
+                </a>
+            </div>
+            <div class="helper-links">
+                <a href="{{ url_for('register') }}">Registrieren</a>
+                <a href="{{ url_for('reset_request') }}">Passwort zurücksetzen</a>
+            </div>
+            <div class="chat-promo">
+                <p class="chat-promo-title">Schüler:innen-Chat</p>
+                <p class="chat-promo-text">Vertiefe dich mit anderen Lernenden im auf Discord gehosteten Gesprächsraum. Dieser Chat nutzt den gleichen Login wie dein Account.</p>
+                <a
+                    class="button-link chat-link button-link--disabled"
+                    href="#"
+                    aria-disabled="true"
+                    tabindex="-1"
+                    data-chat-url="{{ url_for('chat') }}"
+                >
+                    Zum Chat
+                </a>
+                <p class="chat-validation-message" id="chat-validation-message" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var chatLink = document.querySelector(".chat-link");
+            var inputs = document.querySelectorAll(".auth-form input");
+            var messageEl = document.getElementById("chat-validation-message");
+            if (!chatLink || inputs.length === 0) {
+                return;
+            }
+
+            var updateLinkState = function () {
+                ready = Array.from(inputs).every(function (input) {
+                    return input.value.trim().length > 0;
+                });
+                if (ready) {
+                    chatLink.classList.remove("button-link--disabled");
+                    chatLink.removeAttribute("aria-disabled");
+                    chatLink.removeAttribute("tabindex");
+                    chatLink.setAttribute("href", chatLink.dataset.chatUrl);
+                } else {
+                    chatLink.classList.add("button-link--disabled");
+                    chatLink.setAttribute("aria-disabled", "true");
+                    chatLink.setAttribute("tabindex", "-1");
+                    chatLink.setAttribute("href", "#");
+                }
+            };
+
+            inputs.forEach(function (input) {
+                input.addEventListener("input", updateLinkState);
+            });
+            updateLinkState();
+            var ready = false;
+            var validating = false;
+            var isValid = false;
+            var setMessage = function (text) {
+                if (messageEl) {
+                    messageEl.textContent = text || "";
+                }
+            };
+            var canAttempt = function () {
+                return ready && !validating && !isValid;
+            };
+
+            chatLink.addEventListener("click", function (event) {
+                if (!ready) {
+                    event.preventDefault();
+                    setMessage("Bitte gib Benutzername und Passwort ein.");
+                    return;
+                }
+                if (isValid) {
+                    return;
+                }
+                if (!canAttempt()) {
+                    event.preventDefault();
+                    return;
+                }
+                event.preventDefault();
+                validating = true;
+                setMessage("Überprüfe deine Zugangsdaten …");
+                fetch("{{ url_for('validate_account') }}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        username: document.getElementById("username").value.trim(),
+                        password: document.getElementById("password").value,
+                    }),
+                })
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        if (data.valid) {
+                            isValid = true;
+                            chatLink.classList.remove("button-link--disabled");
+                            chatLink.removeAttribute("aria-disabled");
+                            chatLink.removeAttribute("tabindex");
+                            setMessage("");
+                            window.location.href = chatLink.dataset.chatUrl;
+                        } else {
+                            setMessage(data.reason || "Ungültige Anmeldedaten.");
+                        }
+                    })
+                    .catch(function () {
+                        setMessage("Fehler beim Überprüfen. Versuch es noch einmal.");
+                    })
+                    .finally(function () {
+                        validating = false;
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

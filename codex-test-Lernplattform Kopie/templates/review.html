@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz-Review · Lernplattform{% endblock %}
+{% block page_title %}Quiz-Review{% endblock %}
+{% block page_subtitle %}Deine letzte Runde analysieren{% endblock %}
+{% block page_content %}
+    {% if last_quiz %}
+        <article class="panel">
+            <h2>{{ last_quiz.topic }} · {{ last_quiz.subtopic or 'Allgemein' }}</h2>
+            <p class="muted-block">{{ mode_labels.get(last_quiz.mode, last_quiz.mode.title()) }} · {{ last_quiz.score }} Punkte · {{ last_quiz.timestamp }}</p>
+            <div class="grid-two">
+                {% for entry in last_quiz.results %}
+                    <div class="card">
+                        <strong>{{ entry.frage }}</strong>
+                        <p class="muted-block">Deine Antwort: {{ entry.answer }} · Erwartet: {{ entry.expected }}</p>
+                        {% if entry.correct %}
+                            <span class="status-pill" style="background: rgba(16, 185, 129, 0.15); color:#10b981;">Richtig</span>
+                        {% else %}
+                            <span class="status-pill" style="background: rgba(248, 113, 113, 0.15); color:#ef4444;">Falsch</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </article>
+    {% else %}
+        <article class="panel panel-alt">
+            <h2>Keine Review-Daten</h2>
+            <p class="muted-block">Schließe ein Quiz ab, um hier deine Antworten zu sehen.</p>
+        </article>
+    {% endif %}
+{% endblock %}

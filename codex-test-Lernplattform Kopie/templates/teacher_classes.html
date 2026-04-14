@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Klassenregister · Lernplattform{% endblock %}
+{% block page_title %}Klassenregister{% endblock %}
+{% block page_subtitle %}Klassen anlegen und den Überblick behalten{% endblock %}
+{% block page_content %}
+    {% if message %}
+        <div class="notification">{{ message }}</div>
+    {% endif %}
+    <article class="panel">
+        <h2>Neue Klasse erstellen</h2>
+        <form method="post" class="register-form">
+            <input type="text" name="class_name" placeholder="Klassenname" required>
+            <button class="primary-action" type="submit">Klasse erstellen</button>
+        </form>
+    </article>
+    {% if teacher_classes %}
+        {% for klass in teacher_classes %}
+            <article class="panel">
+                <h2>{{ klass.name }} · {{ klass.code }}</h2>
+                <p class="muted-block">{{ klass.students|length }} Schüler*innen</p>
+                <div class="grid-two">
+                    <div class="card">
+                        <h3>Aktive Aufgaben</h3>
+                        {% if klass.assignments %}
+                            <ul class="muted-block">
+                                {% for assignment in klass.assignments %}
+                                    <li>{{ assignment.topic }} · {{ assignment.subtopic }} · {{ assignment.mode_label }} · {{ assignment.status_label }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="muted-block">Noch keine Aufgaben verteilt.</p>
+                        {% endif %}
+                    </div>
+                    <div class="card">
+                        <h3>Schüler*innen-Nutzung</h3>
+                        {% if klass.students %}
+                            <table class="table-panel">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Quizzes</th>
+                                        <th>XP</th>
+                                        <th>Zuletzt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for student in klass.students %}
+                                        <tr>
+                                            <td>{{ student.name }}</td>
+                                            <td>{{ student.quizzes }}</td>
+                                            <td>{{ student.experience }}</td>
+                                            <td>{{ student.last_quiz or '–' }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        {% else %}
+                            <p class="muted-block">Noch keine Schüler*innen angemeldet.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    {% else %}
+        <article class="panel panel-alt">
+            <h2>Keine Klassen vorhanden</h2>
+            <p class="muted-block">Lege eine Klasse an, damit du Aufgaben verteilen kannst.</p>
+        </article>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ergebnis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="result-page">
+    <div class="sticker-strip" aria-label="Sticker-Leiste">
+        {% for icon in sticker_strip %}
+            <span class="sticker-pill">{{ icon }}</span>
+        {% endfor %}
+    </div>
+    <div class="result-shell">
+        <div class="result-card">
+            <div class="card-body">
+                {% include "_nav_links.html" %}
+                <p class="hero-tagline">Alle Aufgaben abgeschlossen</p>
+                <h1>Quiz beendet!</h1>
+                <p class="muted">{{ topic }} · {{ subtopic }} · {{ mode_label }}</p>
+                <div class="result-score">
+                    <p>Du hast <strong>{{ score }} / {{ total }}</strong> Punkte erreicht.</p>
+                    <p>Dein Geldkonto: <strong>{{ money }}</strong></p>
+                </div>
+                {% if sticker_awarded %}
+                    <div class="notification">Perfekt! Du bekommst einen neuen Sticker.</div>
+                {% else %}
+                    <p class="muted">Sticker gibt es ab {{ sticker_threshold }} richtigen Antworten.</p>
+                {% endif %}
+                <div class="action-row">
+                    <a class="button-link" href="{{ url_for('choose_topic') }}">Weitere Themen</a>
+                    <a class="button-link" href="{{ url_for('shop') }}">Zum Shop</a>
+                    <a class="button-link" href="{{ url_for('dashboard') }}">Zum Dashboard</a>
+                </div>
+                {% if results %}
+                    <section class="answers">
+                        <h2>Antwortübersicht</h2>
+                        <ul>
+                            {% for entry in results %}
+                                <li class="{{ 'correct' if entry.correct else 'incorrect' }}">
+                                    <strong>{{ entry.frage }}</strong>
+                                    <p class="muted">Deine Antwort: {{ entry.answer }} · Erwartet: {{ entry.expected }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                {% endif %}
+                {% if ai_feedback %}
+                    <section class="section-card ai-feedback">
+                        <h2>KI-Analyse</h2>
+                        <p><strong>Erkenntnis:</strong> {{ ai_feedback.analysis }}</p>
+                        <p><strong>Empfohlenes Thema:</strong> {{ ai_feedback.topic }}</p>
+                        <p><strong>Übungstipp:</strong> {{ ai_feedback.recommendation }}</p>
+                        <p><strong>Praxisidee:</strong> {{ ai_feedback.practice }}</p>
+                    </section>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

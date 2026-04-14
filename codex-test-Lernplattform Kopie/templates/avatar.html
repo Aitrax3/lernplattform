@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Avatar gestalten · Lernplattform{% endblock %}
+{% block page_title %}Avatar gestalten{% endblock %}
+{% block page_subtitle %}Kreiere deinen Look mit Farben, Formen und Symbolen{% endblock %}
+{% block page_content %}
+    {% if message %}
+        <div class="notification">{{ message }}</div>
+    {% endif %}
+    <article class="panel-grid">
+        <article class="panel">
+            <h2>Aktueller Avatar</h2>
+            <div class="card" style="display:flex; align-items:center; gap:1rem;">
+                <div id="avatar-preview-icon" class="brand-symbol" style="width:64px; height:64px; background: {{ avatar.color }};">{{ avatar.symbol }}</div>
+                <div>
+                    <p id="avatar-preview-label" class="muted-block">{{ avatar.label }}</p>
+                    <p id="avatar-preview-shape" class="muted-block">Form: {{ avatar.shape }}</p>
+                </div>
+            </div>
+        </article>
+        <article class="panel panel-alt">
+            <h2>Deine Sammlung</h2>
+            <div class="grid-two">
+                {% for item in collection %}
+                    <div class="card">
+                        <div class="brand-symbol" style="width:48px; height:48px; background: {{ item.color }};">{{ item.symbol }}</div>
+                        <strong>{{ item.label }}</strong>
+                        <p class="muted-block">{{ item.shape|capitalize }} · {{ item.symbol }}</p>
+                        <form method="post">
+                            <input type="hidden" name="equip_avatar" value="{{ item.label }}">
+                            <button class="button-link secondary" type="submit" {% if avatar.label == item.label %}disabled{% endif %}>
+                                {% if avatar.label == item.label %}Ausgerüstet{% else %}Ausrüsten{% endif %}
+                            </button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </article>
+    </article>
+    <article class="panel">
+        <h2>Neuen Avatar gestalten</h2>
+        <form method="post" class="register-form">
+            <label>Farbe</label>
+            <input id="avatar-color" type="color" name="color" value="{{ avatar.color }}">
+            <label>Form</label>
+            <select class="primary-select" name="shape">
+                <option value="circle" {% if avatar.shape == 'circle' %}selected{% endif %}>Kreis</option>
+                <option value="square" {% if avatar.shape == 'square' %}selected{% endif %}>Quadrat</option>
+                <option value="hexagon" {% if avatar.shape == 'hexagon' %}selected{% endif %}>Sechseck</option>
+            </select>
+            <label>Symbol</label>
+            <div class="grid-two" style="grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));">
+                {% for symbol in symbols %}
+                    <label class="card" style="text-align:center;">
+                        <input type="radio" name="symbol" value="{{ symbol }}" {% if avatar.symbol == symbol %}checked{% endif %}>
+                        <span style="font-size:1.5rem;">{{ symbol }}</span>
+                    </label>
+                {% endfor %}
+            </div>
+            <button class="primary-action full-width" type="submit">Avatar speichern</button>
+        </form>
+    </article>
+    <script>
+        (function () {
+            const colorInput = document.getElementById("avatar-color");
+            const shapeSelect = document.querySelector("select[name='shape']");
+            const symbolRadios = document.querySelectorAll("input[name='symbol']");
+            const previewIcon = document.getElementById("avatar-preview-icon");
+            const previewShape = document.getElementById("avatar-preview-shape");
+            const previewLabel = document.getElementById("avatar-preview-label");
+
+            function updatePreview() {
+                const shape = shapeSelect.value;
+                let symbol = "{{ avatar.symbol }}";
+                symbolRadios.forEach(radio => {
+                    if (radio.checked) {
+                        symbol = radio.value;
+                    }
+                });
+                previewIcon.textContent = symbol;
+                previewIcon.style.background = colorInput.value;
+                previewShape.textContent = "Form: " + shape.charAt(0).toUpperCase() + shape.slice(1);
+                previewLabel.textContent = shape.charAt(0).toUpperCase() + shape.slice(1) + " · " + symbol;
+            }
+
+            colorInput?.addEventListener("input", updatePreview);
+            shapeSelect?.addEventListener("change", updatePreview);
+            symbolRadios.forEach(radio => radio.addEventListener("change", updatePreview));
+        })();
+    </script>
+{% endblock %}
