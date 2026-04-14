@@ -1,22 +1,23 @@
-app = "loopwise"
-primary_region = "fra"
+# fly.toml app configuration file generated for loopwise on 2026-04-14T13:16:34Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'loopwise'
+primary_region = 'iad'
 
 [build]
-  builder = "heroku/buildpacks:20"
-  buildpacks = ["heroku/python"]
 
-[env]
-  PORT = "8080"
-
-[[services]]
+[http_service]
   internal_port = 8080
-  protocol = "tcp"
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-  [[services.ports]]
-    handlers = ["http"]
-    port = 80
-  [[services.ports]]
-    handlers = ["http"]
-    port = 443
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
