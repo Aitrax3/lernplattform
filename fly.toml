@@ -1,22 +1,26 @@
 # fly.toml app configuration file generated for loopwise on 2026-04-14T13:16:34Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-app = 'loopwise'
-primary_region = 'ams'
+app = 'loopwise'               # Dein App-Name auf Fly.io
+primary_region = 'ams'         # Oder deine Wunschregion
 
+# Die [build]-Sektion wird ignoriert, wenn ein Dockerfile vorhanden ist,
+# kann aber drin bleiben.
 [build]
 
+# Umgebungsvariable für den Port (wichtig, falls deine App sie sonstwo liest)
 [env]
   PORT = "8080"
 
+# Konfiguration für den HTTP-Service, der Anfragen an die App weiterleitet
 [http_service]
-  internal_port = 8080
+  internal_port = 8080     # MUSS mit dem --bind Port von Gunicorn übereinstimmen
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = 'stop' # Sorge dafür, dass Maschinen abgeschaltet werden, wenn sie nicht gebraucht werden
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 0  # Setze auf 0, um Kosten zu sparen; Maschine startet bei Bedarf
 
-[[vm]]
+[[vm]] # Konfiguration der virtuellen Maschine
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
