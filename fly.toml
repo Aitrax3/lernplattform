@@ -1,0 +1,22 @@
+app = "loopwise"
+primary_region = "fra"
+
+[build]
+  builder = "heroku/buildpacks:20"
+  buildpacks = ["heroku/python"]
+
+[env]
+  PORT = "8080"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+  [[services.ports]]
+    handlers = ["http"]
+    port = 443
